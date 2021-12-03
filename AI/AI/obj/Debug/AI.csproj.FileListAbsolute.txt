@@ -1,0 +1,114 @@
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\AI.exe.config
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\AI.exe
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\AI.pdb
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.dll
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.xml
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+D:\IT thing\Project\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.Properties.Resources.resources
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CopyComplete
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.exe
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.pdb
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\AI.exe.config
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\AI.exe
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\AI.pdb
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.dll
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.xml
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+D:\AI Graph\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.Properties.Resources.resources
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CopyComplete
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.exe
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.pdb
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\AI.exe.config
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\AI.exe
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\AI.pdb
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.dll
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.xml
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+E:\AI\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.Properties.Resources.resources
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CopyComplete
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.exe
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.pdb
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.NghiVan.resources
+E:\AI\TriTueNhanTao\AI\AI\obj\Debug\AI.Form2.resources
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.Form2.resources
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.NghiVan.resources
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\AI.exe.config
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\AI.exe
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\AI.pdb
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.dll
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.xml
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+E:\Heuristic\TriTueNhanTao\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.Form2.resources
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.NghiVan.resources
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.Properties.Resources.resources
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.csproj.CopyComplete
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.exe
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.pdb
+D:\IT thing\Project\TriTueNhanTao\AI\AI\obj\Debug\AI.Main.resources
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.Form2.resources
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.Main.resources
+D:\AI Graph\TriTueNhanTao\AI\AI\obj\Debug\AI.NghiVan.resources
+E:\Heuristic\TriTueNhanTao\AI\AI\obj\Debug\AI.Main.resources
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\AI.exe.config
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\AI.exe
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\AI.pdb
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.dll
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.xml
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\Admin\Desktop\Project-AI\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.Form2.resources
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.Main.resources
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.NghiVan.resources
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.Properties.Resources.resources
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.csproj.CopyComplete
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.exe
+C:\Users\Admin\Desktop\Project-AI\AI\AI\obj\Debug\AI.pdb
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\AI.exe.config
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\AI.exe
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\AI.pdb
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.dll
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.xml
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+C:\Users\ASUS\Desktop\AI\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.SuggestedBindingRedirects.cache
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.Form2.resources
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.Main.resources
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.NghiVan.resources
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.Properties.Resources.resources
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.CopyComplete
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.exe
+C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.pdb

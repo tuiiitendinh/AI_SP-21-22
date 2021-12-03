@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "24ad1203-7bef-4d29-ac4e-4b897e788d2f": {
+      "ProjectGuid": "24ad1203-7bef-4d29-ac4e-4b897e788d2f",
+      "DisplayName": "AI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
