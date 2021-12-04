@@ -114,11 +114,11 @@ namespace AI
             // rd_Dijkstra
             // 
             this.rd_Dijkstra.AutoSize = true;
-            this.rd_Dijkstra.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_Dijkstra.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rd_Dijkstra.Location = new System.Drawing.Point(221, 33);
             this.rd_Dijkstra.Margin = new System.Windows.Forms.Padding(4);
             this.rd_Dijkstra.Name = "rd_Dijkstra";
-            this.rd_Dijkstra.Size = new System.Drawing.Size(106, 30);
+            this.rd_Dijkstra.Size = new System.Drawing.Size(104, 32);
             this.rd_Dijkstra.TabIndex = 2;
             this.rd_Dijkstra.TabStop = true;
             this.rd_Dijkstra.Text = "Dijkstra";
@@ -128,11 +128,11 @@ namespace AI
             // rd_Kruskal
             // 
             this.rd_Kruskal.AutoSize = true;
-            this.rd_Kruskal.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_Kruskal.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rd_Kruskal.Location = new System.Drawing.Point(103, 35);
             this.rd_Kruskal.Margin = new System.Windows.Forms.Padding(4);
             this.rd_Kruskal.Name = "rd_Kruskal";
-            this.rd_Kruskal.Size = new System.Drawing.Size(106, 30);
+            this.rd_Kruskal.Size = new System.Drawing.Size(100, 32);
             this.rd_Kruskal.TabIndex = 2;
             this.rd_Kruskal.TabStop = true;
             this.rd_Kruskal.Text = "Kruskal";
@@ -143,11 +143,11 @@ namespace AI
             // 
             this.rd_Prim.AutoSize = true;
             this.rd_Prim.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.rd_Prim.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rd_Prim.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rd_Prim.Location = new System.Drawing.Point(8, 37);
             this.rd_Prim.Margin = new System.Windows.Forms.Padding(4);
             this.rd_Prim.Name = "rd_Prim";
-            this.rd_Prim.Size = new System.Drawing.Size(78, 30);
+            this.rd_Prim.Size = new System.Drawing.Size(76, 32);
             this.rd_Prim.TabIndex = 2;
             this.rd_Prim.TabStop = true;
             this.rd_Prim.Text = "Prim";
@@ -159,7 +159,7 @@ namespace AI
             this.groupBox1.Controls.Add(this.rd_Dijkstra);
             this.groupBox1.Controls.Add(this.rd_Kruskal);
             this.groupBox1.Controls.Add(this.rd_Prim);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(479, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -173,13 +173,14 @@ namespace AI
             // 
             this.textOpen.BackColor = System.Drawing.Color.White;
             this.textOpen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textOpen.ForeColor = System.Drawing.Color.White;
+            this.textOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textOpen.ForeColor = System.Drawing.Color.Black;
             this.textOpen.Location = new System.Drawing.Point(8, 85);
             this.textOpen.Margin = new System.Windows.Forms.Padding(4);
             this.textOpen.Name = "textOpen";
             this.textOpen.ReadOnly = true;
             this.textOpen.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textOpen.Size = new System.Drawing.Size(158, 30);
+            this.textOpen.Size = new System.Drawing.Size(158, 32);
             this.textOpen.TabIndex = 7;
             this.textOpen.TextChanged += new System.EventHandler(this.textOpen_TextChanged);
             // 
@@ -187,13 +188,14 @@ namespace AI
             // 
             this.textClose.BackColor = System.Drawing.Color.White;
             this.textClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textClose.ForeColor = System.Drawing.Color.White;
+            this.textClose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textClose.ForeColor = System.Drawing.Color.Black;
             this.textClose.Location = new System.Drawing.Point(274, 94);
             this.textClose.Margin = new System.Windows.Forms.Padding(4);
             this.textClose.Name = "textClose";
             this.textClose.ReadOnly = true;
             this.textClose.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textClose.Size = new System.Drawing.Size(158, 30);
+            this.textClose.Size = new System.Drawing.Size(158, 32);
             this.textClose.TabIndex = 8;
             // 
             // label1
@@ -220,26 +222,28 @@ namespace AI
             // 
             this.textG.BackColor = System.Drawing.Color.White;
             this.textG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textG.ForeColor = System.Drawing.Color.White;
+            this.textG.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textG.ForeColor = System.Drawing.Color.Black;
             this.textG.Location = new System.Drawing.Point(8, 183);
             this.textG.Margin = new System.Windows.Forms.Padding(4);
             this.textG.Name = "textG";
             this.textG.ReadOnly = true;
             this.textG.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textG.Size = new System.Drawing.Size(158, 30);
+            this.textG.Size = new System.Drawing.Size(158, 32);
             this.textG.TabIndex = 11;
             // 
             // textPrev
             // 
             this.textPrev.BackColor = System.Drawing.Color.White;
             this.textPrev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textPrev.ForeColor = System.Drawing.Color.White;
+            this.textPrev.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textPrev.ForeColor = System.Drawing.Color.Black;
             this.textPrev.Location = new System.Drawing.Point(274, 183);
             this.textPrev.Margin = new System.Windows.Forms.Padding(4);
             this.textPrev.Name = "textPrev";
             this.textPrev.ReadOnly = true;
             this.textPrev.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textPrev.Size = new System.Drawing.Size(158, 30);
+            this.textPrev.Size = new System.Drawing.Size(158, 32);
             this.textPrev.TabIndex = 12;
             // 
             // label3
@@ -295,11 +299,11 @@ namespace AI
             // la_Chiphi
             // 
             this.la_Chiphi.AutoSize = true;
-            this.la_Chiphi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.la_Chiphi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.la_Chiphi.Location = new System.Drawing.Point(849, 15);
             this.la_Chiphi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.la_Chiphi.Name = "la_Chiphi";
-            this.la_Chiphi.Size = new System.Drawing.Size(123, 35);
+            this.la_Chiphi.Size = new System.Drawing.Size(124, 37);
             this.la_Chiphi.TabIndex = 17;
             this.la_Chiphi.Text = "Distance";
             // 
@@ -437,7 +441,7 @@ namespace AI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1732, 736);
+            this.ClientSize = new System.Drawing.Size(1849, 736);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Run);
