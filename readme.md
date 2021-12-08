@@ -7,8 +7,8 @@
 
 ### Dijkstra 
 
-![alt text](https://github.com/tuiiitendinh/AI_SP-21-22/tree/main/Images/readme/Dijkstra-Algorithm.png?raw=true)
+![](/Images/readme/Dijkstra-Algorithm.png?raw=true "Dijkstra")
 
 ### Prim
 
-![alt text](https://github.com/tuiiitendinh/AI_SP-21-22/tree/main/Images/readme/prim.jpg?raw=true)
+![](/Images/readme/prim.jpg?raw=true "Prim")
