@@ -45,7 +45,7 @@ namespace AI
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(188, 18);
             this.label4.TabIndex = 8;
-            this.label4.Text = "    Nhấn \"Yes\": Thay đổi  0 -> ∞";
+            this.label4.Text = "    Press \"Yes\": Updating  0 -> ∞";
             // 
             // label3
             // 
@@ -55,7 +55,7 @@ namespace AI
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(187, 18);
             this.label3.TabIndex = 7;
-            this.label3.Text = "    Nhấn \"No\": Không thay đổi";
+            this.label3.Text = "    Press \"No\": Nothing Changed!";
             // 
             // label2
             // 
@@ -65,7 +65,7 @@ namespace AI
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(416, 18);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Ý của bạn là: \"Trọng số 0 thể hiện không có đường đi phải không ?\"";
+            this.label2.Text = "Do you mean: \"Weight = 0 illustrates that there is no path?\"";
             // 
             // label1
             // 
@@ -75,7 +75,7 @@ namespace AI
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 18);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Phát hiện số 0  ";
+            this.label1.Text = "Number 0 detected!";
             // 
             // button2
             // 
@@ -112,9 +112,9 @@ namespace AI
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NghiVan";
+            this.Name = "Interrogative";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NghiVan";
+            this.Text = "Interrogating";
             this.Load += new System.EventHandler(this.NghiVan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
