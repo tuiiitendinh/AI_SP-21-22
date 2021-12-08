@@ -59,9 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Buttonradias.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Dijkstra.cs" />
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
