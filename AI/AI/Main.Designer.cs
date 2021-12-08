@@ -30,8 +30,8 @@ namespace AI
         ///
         private void InitializeComponent()
         {
-            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation1 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation3 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rd_Dijkstra = new System.Windows.Forms.RadioButton();
@@ -44,20 +44,19 @@ namespace AI
             this.label2 = new System.Windows.Forms.Label();
             this.textG = new System.Windows.Forms.TextBox();
             this.textPrev = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.la_Chiphi = new System.Windows.Forms.Label();
-            this.g_HuongDan = new System.Windows.Forms.GroupBox();
             this.g_Source = new System.Windows.Forms.GroupBox();
             this.rTB_Source = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_Tao = new System.Windows.Forms.Button();
             this.btn_ReadFile = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Run = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
+            this.g_HuongDan = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.g_Source.SuspendLayout();
@@ -67,7 +66,7 @@ namespace AI
             // 
             this.gViewer1.ArrowheadLength = 10D;
             this.gViewer1.AsyncLayout = false;
-            this.gViewer1.AutoScroll = true;
+            resources.ApplyResources(this.gViewer1, "gViewer1");
             this.gViewer1.BackColor = System.Drawing.Color.White;
             this.gViewer1.BackwardEnabled = false;
             this.gViewer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -80,9 +79,7 @@ namespace AI
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = true;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(479, 98);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
-            this.gViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
             this.gViewer1.NavigationVisible = true;
@@ -95,11 +92,9 @@ namespace AI
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(833, 626);
-            this.gViewer1.TabIndex = 0;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = false;
-            this.gViewer1.Transform = planeTransformation1;
+            this.gViewer1.Transform = planeTransformation3;
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
             this.gViewer1.ZoomF = 1D;
@@ -113,44 +108,26 @@ namespace AI
             // 
             // rd_Dijkstra
             // 
-            this.rd_Dijkstra.AutoSize = true;
-            this.rd_Dijkstra.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rd_Dijkstra.Location = new System.Drawing.Point(221, 33);
-            this.rd_Dijkstra.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.rd_Dijkstra, "rd_Dijkstra");
             this.rd_Dijkstra.Name = "rd_Dijkstra";
-            this.rd_Dijkstra.Size = new System.Drawing.Size(106, 30);
-            this.rd_Dijkstra.TabIndex = 2;
             this.rd_Dijkstra.TabStop = true;
-            this.rd_Dijkstra.Text = "Dijkstra";
             this.rd_Dijkstra.UseVisualStyleBackColor = true;
             this.rd_Dijkstra.CheckedChanged += new System.EventHandler(this.rd_Dijkstra_CheckedChanged);
             // 
             // rd_Kruskal
             // 
-            this.rd_Kruskal.AutoSize = true;
-            this.rd_Kruskal.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rd_Kruskal.Location = new System.Drawing.Point(103, 35);
-            this.rd_Kruskal.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.rd_Kruskal, "rd_Kruskal");
             this.rd_Kruskal.Name = "rd_Kruskal";
-            this.rd_Kruskal.Size = new System.Drawing.Size(106, 30);
-            this.rd_Kruskal.TabIndex = 2;
             this.rd_Kruskal.TabStop = true;
-            this.rd_Kruskal.Text = "Kruskal";
             this.rd_Kruskal.UseVisualStyleBackColor = true;
             this.rd_Kruskal.CheckedChanged += new System.EventHandler(this.rd_Kruskal_CheckedChanged);
             // 
             // rd_Prim
             // 
-            this.rd_Prim.AutoSize = true;
+            resources.ApplyResources(this.rd_Prim, "rd_Prim");
             this.rd_Prim.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.rd_Prim.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rd_Prim.Location = new System.Drawing.Point(8, 37);
-            this.rd_Prim.Margin = new System.Windows.Forms.Padding(4);
             this.rd_Prim.Name = "rd_Prim";
-            this.rd_Prim.Size = new System.Drawing.Size(78, 30);
-            this.rd_Prim.TabIndex = 2;
             this.rd_Prim.TabStop = true;
-            this.rd_Prim.Text = "Prim";
             this.rd_Prim.UseVisualStyleBackColor = true;
             this.rd_Prim.CheckedChanged += new System.EventHandler(this.rd_Prim_CheckedChanged);
             // 
@@ -159,28 +136,18 @@ namespace AI
             this.groupBox1.Controls.Add(this.rd_Dijkstra);
             this.groupBox1.Controls.Add(this.rd_Kruskal);
             this.groupBox1.Controls.Add(this.rd_Prim);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(479, 10);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(335, 71);
-            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Mode";
             // 
             // textOpen
             // 
             this.textOpen.BackColor = System.Drawing.Color.White;
             this.textOpen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textOpen.ForeColor = System.Drawing.Color.White;
-            this.textOpen.Location = new System.Drawing.Point(8, 85);
-            this.textOpen.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.textOpen, "textOpen");
             this.textOpen.Name = "textOpen";
             this.textOpen.ReadOnly = true;
-            this.textOpen.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textOpen.Size = new System.Drawing.Size(158, 30);
-            this.textOpen.TabIndex = 7;
             this.textOpen.TextChanged += new System.EventHandler(this.textOpen_TextChanged);
             // 
             // textClose
@@ -188,182 +155,97 @@ namespace AI
             this.textClose.BackColor = System.Drawing.Color.White;
             this.textClose.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textClose.ForeColor = System.Drawing.Color.White;
-            this.textClose.Location = new System.Drawing.Point(274, 94);
-            this.textClose.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.textClose, "textClose");
             this.textClose.Name = "textClose";
             this.textClose.ReadOnly = true;
-            this.textClose.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textClose.Size = new System.Drawing.Size(158, 30);
-            this.textClose.TabIndex = 8;
+            this.textClose.TextChanged += new System.EventHandler(this.textClose_TextChanged);
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 52);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Open";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(269, 46);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 25);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Close";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textG
             // 
             this.textG.BackColor = System.Drawing.Color.White;
             this.textG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textG.ForeColor = System.Drawing.Color.White;
-            this.textG.Location = new System.Drawing.Point(8, 183);
-            this.textG.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.textG, "textG");
             this.textG.Name = "textG";
             this.textG.ReadOnly = true;
-            this.textG.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textG.Size = new System.Drawing.Size(158, 30);
-            this.textG.TabIndex = 11;
             // 
             // textPrev
             // 
             this.textPrev.BackColor = System.Drawing.Color.White;
             this.textPrev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textPrev.ForeColor = System.Drawing.Color.White;
-            this.textPrev.Location = new System.Drawing.Point(274, 183);
-            this.textPrev.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.textPrev, "textPrev");
             this.textPrev.Name = "textPrev";
             this.textPrev.ReadOnly = true;
-            this.textPrev.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textPrev.Size = new System.Drawing.Size(158, 30);
-            this.textPrev.TabIndex = 12;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 155);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 25);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "G";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(269, 154);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Prev";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textOpen);
             this.groupBox2.Controls.Add(this.textPrev);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.textG);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.textClose);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(1321, 4);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(493, 283);
-            this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Argument";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1603, -129);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Multiline = true;
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox1.Size = new System.Drawing.Size(361, 27);
-            this.textBox1.TabIndex = 8;
             // 
             // la_Chiphi
             // 
-            this.la_Chiphi.AutoSize = true;
-            this.la_Chiphi.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.la_Chiphi.Location = new System.Drawing.Point(849, 15);
-            this.la_Chiphi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            resources.ApplyResources(this.la_Chiphi, "la_Chiphi");
             this.la_Chiphi.Name = "la_Chiphi";
-            this.la_Chiphi.Size = new System.Drawing.Size(123, 35);
-            this.la_Chiphi.TabIndex = 17;
-            this.la_Chiphi.Text = "Distance";
-            // 
-            // g_HuongDan
-            // 
-            this.g_HuongDan.BackColor = System.Drawing.Color.White;
-            this.g_HuongDan.Location = new System.Drawing.Point(1329, 319);
-            this.g_HuongDan.Margin = new System.Windows.Forms.Padding(4);
-            this.g_HuongDan.Name = "g_HuongDan";
-            this.g_HuongDan.Padding = new System.Windows.Forms.Padding(4);
-            this.g_HuongDan.Size = new System.Drawing.Size(481, 406);
-            this.g_HuongDan.TabIndex = 18;
-            this.g_HuongDan.TabStop = false;
-            this.g_HuongDan.Enter += new System.EventHandler(this.g_HuongDan_Enter);
+            this.la_Chiphi.Click += new System.EventHandler(this.la_Chiphi_Click);
             // 
             // g_Source
             // 
             this.g_Source.Controls.Add(this.rTB_Source);
-            this.g_Source.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.g_Source.Location = new System.Drawing.Point(17, 89);
-            this.g_Source.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.g_Source, "g_Source");
             this.g_Source.Name = "g_Source";
-            this.g_Source.Padding = new System.Windows.Forms.Padding(4);
-            this.g_Source.Size = new System.Drawing.Size(454, 532);
-            this.g_Source.TabIndex = 19;
             this.g_Source.TabStop = false;
             // 
             // rTB_Source
             // 
             this.rTB_Source.BackColor = System.Drawing.Color.White;
-            this.rTB_Source.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rTB_Source.Location = new System.Drawing.Point(8, 9);
-            this.rTB_Source.Margin = new System.Windows.Forms.Padding(4);
+            resources.ApplyResources(this.rTB_Source, "rTB_Source");
             this.rTB_Source.Name = "rTB_Source";
             this.rTB_Source.ReadOnly = true;
-            this.rTB_Source.Size = new System.Drawing.Size(434, 522);
-            this.rTB_Source.TabIndex = 0;
-            this.rTB_Source.Text = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1321, 290);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "Step";
             // 
             // btn_Tao
             // 
-            this.btn_Tao.AutoSize = true;
+            resources.ApplyResources(this.btn_Tao, "btn_Tao");
             this.btn_Tao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.btn_Tao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Tao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Tao.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Tao.ForeColor = System.Drawing.Color.White;
-            this.btn_Tao.Location = new System.Drawing.Point(219, 15);
-            this.btn_Tao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Tao.Name = "btn_Tao";
-            this.btn_Tao.Size = new System.Drawing.Size(226, 66);
-            this.btn_Tao.TabIndex = 20;
-            this.btn_Tao.Text = "Create Matrix";
             this.btn_Tao.UseVisualStyleBackColor = false;
             this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
             // 
@@ -371,15 +253,9 @@ namespace AI
             // 
             this.btn_ReadFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.btn_ReadFile.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_ReadFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ReadFile.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btn_ReadFile, "btn_ReadFile");
             this.btn_ReadFile.ForeColor = System.Drawing.Color.White;
-            this.btn_ReadFile.Location = new System.Drawing.Point(25, 13);
-            this.btn_ReadFile.Margin = new System.Windows.Forms.Padding(4);
             this.btn_ReadFile.Name = "btn_ReadFile";
-            this.btn_ReadFile.Size = new System.Drawing.Size(177, 68);
-            this.btn_ReadFile.TabIndex = 1;
-            this.btn_ReadFile.Text = "Read File";
             this.btn_ReadFile.UseVisualStyleBackColor = false;
             this.btn_ReadFile.Click += new System.EventHandler(this.btn_ReadFile_Click);
             // 
@@ -387,15 +263,10 @@ namespace AI
             // 
             this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.btn_Next.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Next.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.btn_Next, "btn_Next");
             this.btn_Next.ForeColor = System.Drawing.Color.Black;
             this.btn_Next.Image = global::AI.Properties.Resources.next_button3;
-            this.btn_Next.Location = new System.Drawing.Point(269, 638);
-            this.btn_Next.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Next.Name = "btn_Next";
-            this.btn_Next.Size = new System.Drawing.Size(154, 69);
-            this.btn_Next.TabIndex = 5;
             this.btn_Next.UseVisualStyleBackColor = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
@@ -403,15 +274,10 @@ namespace AI
             // 
             this.btn_Run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(79)))));
             this.btn_Run.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Run.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Run.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.btn_Run, "btn_Run");
             this.btn_Run.ForeColor = System.Drawing.Color.White;
             this.btn_Run.Image = global::AI.Properties.Resources.start_button;
-            this.btn_Run.Location = new System.Drawing.Point(1158, 15);
-            this.btn_Run.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Run.Name = "btn_Run";
-            this.btn_Run.Size = new System.Drawing.Size(154, 68);
-            this.btn_Run.TabIndex = 3;
             this.btn_Run.UseVisualStyleBackColor = false;
             this.btn_Run.Click += new System.EventHandler(this.btn_Run_Click);
             // 
@@ -419,26 +285,26 @@ namespace AI
             // 
             this.btn_Previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.btn_Previous.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Previous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Previous.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.btn_Previous, "btn_Previous");
             this.btn_Previous.ForeColor = System.Drawing.Color.Black;
             this.btn_Previous.Image = global::AI.Properties.Resources.previos_button1;
-            this.btn_Previous.Location = new System.Drawing.Point(48, 638);
-            this.btn_Previous.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Previous.Name = "btn_Previous";
-            this.btn_Previous.Size = new System.Drawing.Size(154, 69);
-            this.btn_Previous.TabIndex = 6;
             this.btn_Previous.UseVisualStyleBackColor = false;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
             // 
+            // g_HuongDan
+            // 
+            this.g_HuongDan.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.g_HuongDan, "g_HuongDan");
+            this.g_HuongDan.Name = "g_HuongDan";
+            this.g_HuongDan.TabStop = false;
+            this.g_HuongDan.Enter += new System.EventHandler(this.g_HuongDan_Enter);
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1732, 736);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Run);
             this.Controls.Add(this.btn_Tao);
@@ -451,12 +317,8 @@ namespace AI
             this.Controls.Add(this.btn_ReadFile);
             this.Controls.Add(this.gViewer1);
             this.Controls.Add(this.textBox1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Graph Theory";
             this.Load += new System.EventHandler(this.Form2_Load_1);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -486,15 +348,14 @@ namespace AI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textG;
         private System.Windows.Forms.TextBox textPrev;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label la_Chiphi;
-        private System.Windows.Forms.GroupBox g_HuongDan;
         private System.Windows.Forms.GroupBox g_Source;
         private System.Windows.Forms.RichTextBox rTB_Source;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_Tao;
+        private System.Windows.Forms.GroupBox g_HuongDan;
     }
 }

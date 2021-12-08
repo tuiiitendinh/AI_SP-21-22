@@ -87,7 +87,7 @@ namespace AI
                     }
                     catch
                     {
-                        Node[j] = $"N{j}";
+                        Node[j] = $"N{j} ";
                     }
                 }
             }
@@ -129,7 +129,7 @@ namespace AI
                     if (am)
                     {
                         am = false;
-                        MessageBox.Show("Hệ thống nhạy cảm với số âm :(", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Negative numbers is not allowed!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
@@ -164,7 +164,7 @@ namespace AI
             }
             else
             {
-                MessageBox.Show("Chỉ đọc được đồ thị đơn vô hướng thôi !!! ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("UNDIRECTED GRAPH Only!!! ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -275,10 +275,10 @@ namespace AI
             tutorial =  new RichTextBox();
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.Brown;
-            tutorial.SelectedText = "Khởi tạo:\n\n";
+            tutorial.SelectedText = "Begin!\n\n";
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.DarkCyan;
-            tutorial.SelectedText = "Cho đỉnh bắt đầu vào tập Open\n\n";
+            tutorial.SelectedText = "Add starting node to list Open\n\n";
             int chosen = NodeToIndex(viTri[0]);
             int step = 0;
             Open.Add(viTri[0]);
@@ -310,7 +310,7 @@ namespace AI
                 tutorial = new RichTextBox();
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.Brown;
-                tutorial.SelectedText = $"Bước {step}:\n\n";
+                tutorial.SelectedText = $"Step {step}:\n\n";
                 List<string> line = new List<string>();
                 List<string> node = new List<string>();
                 int min = int.MaxValue;
@@ -329,12 +329,12 @@ namespace AI
                 history.hOpen.Add(new List<string>(Open));
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.OrangeRed;
-                tutorial.SelectedText = $"* Chọn đỉnh {Node[chosen]}\n(Do trong tập Open thì g[{chosen}] là nhỏ nhất)\n* Mở các đỉnh kề với {Node[chosen]} mà không nằm trong tập Close\n\n";
+                tutorial.SelectedText = $"*Selected node: {Node[chosen]}\n(Minimum vertex in g[{chosen}])\n* Looking for adjacent vertices {Node[chosen]} not existed in Close\n\n";
                 if (prev[chosen] != -1)
                 {
                     tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                     tutorial.SelectionColor = Color.Green;
-                    tutorial.SelectedText = $"Nối đỉnh {Node[prev[chosen]]} và đỉnh {Node[chosen]}\n\n";
+                    tutorial.SelectedText = $"{Node[prev[chosen]]} and {Node[chosen]} is set to Connected.\n\n";
                 }
                 Close.Add(Node[chosen]);
                 Open.RemoveAt(indexChosen);
@@ -344,10 +344,10 @@ namespace AI
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.OrangeRed;
-                        tutorial.SelectedText = $"# Mở đỉnh {Node[i]}: \ng[{i}] = g[{chosen}] + w({Node[chosen]},{Node[i]}) = {g[chosen]} + {Weight[chosen, i]} = {g[chosen] + Weight[chosen, i]} \n";
+                        tutorial.SelectedText = $"# Selected {Node[i]}: \ng[{i}] = g[{chosen}] + w({Node[chosen]},{Node[i]}) = {g[chosen]} + {Weight[chosen, i]} = {g[chosen] + Weight[chosen, i]} \n";
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Purple;
-                        tutorial.SelectedText = $"prev[{i}] = {chosen}\n\n";
+                        tutorial.SelectedText = $"Prev[{i}] = {chosen}\n\n";
                         line.Add(ToId(chosen, i));
 
                         if (g[i] > g[chosen] + Weight[chosen, i] || g[i] == 0)
@@ -359,32 +359,32 @@ namespace AI
                         {
                             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                             tutorial.SelectionColor = Color.OrangeRed;
-                            tutorial.SelectedText = $"# Mở đỉnh {Node[i]} nhưng không cập nhật g[{i}]\n(vì g[{i}] = {g[i]} < g[{chosen}] + w({Node[chosen]},{Node[i]}) = {g[chosen] + Weight[chosen, i]} )\n\n";
+                            tutorial.SelectedText = $"# Selected {Node[i]}, do not update g[{i}]\n (g[{i}] = {g[i]} < g[{chosen}] + w({Node[chosen]},{Node[i]}) = {g[chosen] + Weight[chosen, i]} )\n\n";
                         }
                         if (!Open.Contains(Node[i]))
                         {
                             Open.Add(Node[i]);
                             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                             tutorial.SelectionColor = Color.DarkGoldenrod;
-                            tutorial.SelectedText = $"# Thêm đỉnh {Node[i]} vào tập Open\n\n";
+                            tutorial.SelectedText = $"# Add {Node[i]} to Open\n\n";
                         }
                         else
                         {
                             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                             tutorial.SelectionColor = Color.DarkGoldenrod;
-                            tutorial.SelectedText = $"# Không thêm đỉnh {Node[i]}\nvào tập Open vì tập Open có đỉnh này rồi\n\n";
+                            tutorial.SelectedText = $"# {Node[i]}\n existed in Open!\n\n";
                         }
                     }
                     else if(Weight[chosen, i] >= 0 && Close.Contains(Node[i]))
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DarkSlateGray;
-                        tutorial.SelectedText = $"# Không chọn đỉnh {Node[i]}\nvì đỉnh này đã nằm trong tập Close\n\n";
+                        tutorial.SelectedText = $"#{Node[i]}\n existed in Close, do not select!\n\n";
                     }
                 }
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.DarkSlateGray;
-                tutorial.SelectedText = $"Thêm đỉnh {Node[chosen]} vào Close\n\n";  
+                tutorial.SelectedText = $"Add {Node[chosen]} to Close\n\n";  
                 history.Tutorial.Add(tutorial);
                 history.line.Add(new List<string>(line));
                 history.hClose.Add(new List<string>(Close));
@@ -405,10 +405,10 @@ namespace AI
             tutorial = new RichTextBox();
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.Brown;
-            tutorial.SelectedText = "Khởi tạo :\n\n";
+            tutorial.SelectedText = "Begin!\n\n";
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.DarkCyan;
-            tutorial.SelectedText = "Sắp xếp các cạnh theo trọng số\ntừ nhỏ đến lớn và đưa vào tập Open\n\nClose = {}\n\n g = 0\n\n";
+            tutorial.SelectedText = "Arrange vertices in order from smallest to largest.\n Add them to Open.\n\nClose = {}\n\n g = 0\n\n";
             for(int i = 0; i < coutNode -1 ; i++)
             {
                 for(int j = i+1; j < coutNode; j++)
@@ -447,23 +447,23 @@ namespace AI
                 tutorial = new RichTextBox();
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.Brown;
-                tutorial.SelectedText = $"Bước {step}:\n\n";
+                tutorial.SelectedText = $"Step {step}:\n\n";
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.OrangeRed;
-                tutorial.SelectedText = $"-Chọn cạnh {Open[0]}\n\n";
+                tutorial.SelectedText = $"Selecting {Open[0]}\n\n";
                 if (Close.Contains(chosen.Item1)&&Close.Contains(chosen.Item2))
                 {
                    if (!checkEgde.Contains(ToId(NodeToIndex(chosen.Item1),NodeToIndex(chosen.Item2)))){
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DimGray;
-                        tutorial.SelectedText = $"# Không nhận cạnh {Open[0]}\n(vì đỉnh cả hai đỉnh {chosen.Item1}, {chosen.Item2} đã nằm trong tập Close)\n\n";
+                        tutorial.SelectedText = $"# Do not Select {Open[0]}!\n({chosen.Item1}, {chosen.Item2} existed in Close)\n\n";
                         history.hprev[NodeToIndex(chosen.Item1), NodeToIndex(chosen.Item2)] = 0;
                    }
                    else
                    {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.LimeGreen;
-                        tutorial.SelectedText = $"# Nhận cạnh {Open[0]}\n (vì đồ thị sẽ không liên thông\nmặc dù hai đỉnh {chosen.Item1}, {chosen.Item2} đã nằm trong tập Close)\n\n";
+                        tutorial.SelectedText = $"# Select {Open[0]}\n (No connection of\n {chosen.Item1}, {chosen.Item2} existed in Close)\n\n";
                         history.hprev[NodeToIndex(chosen.Item1), NodeToIndex(chosen.Item2)] = 2;
                         history.hg[step, 0] = g + Weight[NodeToIndex(sortLineName[0].Item1), NodeToIndex(sortLineName[0].Item2)];
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
@@ -480,7 +480,7 @@ namespace AI
                 {
                     tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                     tutorial.SelectionColor = Color.ForestGreen;
-                    tutorial.SelectedText = $"# Nhận cạnh {Open[0]}\n\n";
+                    tutorial.SelectedText = $"# Select {Open[0]}\n\n";
                     // MessageBox.Show(sortLineName.Count.ToString()+" "+(step - 1).ToString());
                     history.hg[step, 0] = g + Weight[NodeToIndex(sortLineName[0].Item1), NodeToIndex(sortLineName[0].Item2)];
                     tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
@@ -496,26 +496,26 @@ namespace AI
                         Close.Add(chosen.Item1);
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Thêm {chosen.Item1} vào tập Close\n\n";
+                        tutorial.SelectedText = $"Add {chosen.Item1} to Close\n\n";
                     }
                     else
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Không thêm {chosen.Item1} vào tập Close\nvì {chosen.Item1} đã tồn tại trông Close\n\n";
+                        tutorial.SelectedText = $"{chosen.Item1} existed in Close!!\nMove on to the next step\n";
                     }
                     if (!Close.Contains(chosen.Item2))
                     {
                         Close.Add(chosen.Item2);
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Thêm {chosen.Item2} vào tập Close\n\n";
+                        tutorial.SelectedText = $"Add {chosen.Item2} to Close\n\n";
                     }
                     else
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Không thêm {chosen.Item2} vào tập Close\nvì {chosen.Item2} đã tồn tại trông Close\n\n";
+                        tutorial.SelectedText = $"{chosen.Item2} existed in Close\nMove on to the next step\n";
                     }
                 }
                 sortLineName.RemoveAt(0);
@@ -534,7 +534,7 @@ namespace AI
             tutorial = new RichTextBox();
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.Brown;
-            tutorial.SelectedText = "Khởi tạo:\n\n ";
+            tutorial.SelectedText = "Begin! \n\n ";
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.DarkCyan;
             tutorial.SelectedText = "Open[]\nClose[";
@@ -562,10 +562,10 @@ namespace AI
                 tutorial = new RichTextBox();
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.Brown;
-                tutorial.SelectedText = $"Bước {step}:\n\n";
+                tutorial.SelectedText = $"Step {step}:\n\n";
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.OrangeRed;
-                tutorial.SelectedText = $"Chọn đỉnh {Node[indexChosen]}\n\n";
+                tutorial.SelectedText = $"Select Node {Node[indexChosen]}\n\n";
                 history.Node.Add(new List<string>(Close));
                 for (int i = 0; i < coutNode; i++)
                 {
@@ -581,7 +581,7 @@ namespace AI
                 {
                     tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                     tutorial.SelectionColor = Color.OrangeRed;
-                    tutorial.SelectedText = $"Mở các cạnh {string.Join(" , ", lineNode)}\n\n";
+                    tutorial.SelectedText = $"Searching for {string.Join(" , ", lineNode)}\n\n";
                 }
                 history.hOpen.Add(new List<string>(Open));
                 history.line.Add(line);
@@ -593,7 +593,7 @@ namespace AI
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Chọn cạnh {Node[egde[i].Item1]+Node[egde[i].Item2]}\nVì cạnh này nhỏ nhất trong các cạnh\n({string.Join(" , ", Open)})\ntrong tập Open\n\n";
+                        tutorial.SelectedText = $"Select minimum node {Node[egde[i].Item1]+Node[egde[i].Item2]}\n  out of \n({string.Join(" , ", Open)})\n in Open\n\n";
                         history.hg[step, 1] = g + Weight[egde[i].Item1, egde[i].Item2];
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Purple;
@@ -601,7 +601,7 @@ namespace AI
                         g = history.hg[step, 1];
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.OrangeRed;
-                        tutorial.SelectedText = $"Đưa đỉnh {Node[egde[i].Item2]} vào tập Close\n\n";
+                        tutorial.SelectedText = $"Add {Node[egde[i].Item2]} to Close\n\n";
                         history.hprev[step, 0] = egde[i].Item1;
                         history.hg[step, 0] = egde[i].Item2;
                         Close.Add(Node[egde[i].Item2]);
@@ -614,7 +614,7 @@ namespace AI
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DimGray;
-                        tutorial.SelectedText = $"Không chọn cạnh {Node[egde[i].Item1] + Node[egde[i].Item2]}\nVì đỉnh {Node[egde[i].Item2]} đã trong tập Close\nBỏ cạnh {Node[egde[i].Item1] + Node[egde[i].Item2]} khỏi tập Open\n";
+                        tutorial.SelectedText = $"Do not select {Node[egde[i].Item1] + Node[egde[i].Item2]}\n{Node[egde[i].Item2]} existed Close\nEject {Node[egde[i].Item1] + Node[egde[i].Item2]} from Open\n";
                         Open.RemoveAt(Open.IndexOf(ToNode(egde[i].Item1, egde[i].Item2)));
                         egde.RemoveAt(egde.IndexOf(egde[i]));
                     }
@@ -643,9 +643,9 @@ namespace AI
         {
            // rTB_Source = new RichTextBox();
             rTB_Source.Text = "";
-            rTB_Source.SelectedText = "Mỗi đỉnh ứng 1 số g(N)\n\nChi phí từ đỉnh S ban đầu tới N\n\nClose : Tập đỉnh đóng\n\nOpen: Tập đỉnh mở\n\n";
+            rTB_Source.SelectedText = "Each corresponding vertex g(N)\n\nInital cost from Starting to Destination Node\n\nClose: List of arrivred vertices\n\nOpen: List of pending vertices\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước khởi tạo\n";
+            rTB_Source.SelectedText = "Inital step: \n";
             rTB_Source.SelectionColor = Color.DarkCyan;
             rTB_Source.SelectedText = "Open = {";
             rTB_Source.SelectionColor = Color.Red;
@@ -655,7 +655,7 @@ namespace AI
             rTB_Source.SelectionColor = Color.DarkCyan;
             rTB_Source.SelectedText = "g[] = {0}\nprev[] = {-1}\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước thực thi: \n\n";
+            rTB_Source.SelectedText = "Executing step: \n\n";
             rTB_Source.SelectionColor = Color.Red;
             rTB_Source.SelectedText = "While";
             rTB_Source.SelectionColor = Color.Black;
@@ -665,31 +665,31 @@ namespace AI
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Chọn N thuộc Open có g(N) nhỏ nhất\n";
+            rTB_Source.SelectedText = " __Select N of Minium g(N) in Open \n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "     __Nối với đỉnh chọn trước đó (nếu có)\n";
+            rTB_Source.SelectedText = "     __Connecting to previous node (if existing)\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Mở các đỉnh Q sau đỉnh N\n";
+            rTB_Source.SelectedText = " __Open vertices Q following by N\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "    __Nếu g(Q) > g(N) + w(N,Q)\n    __g(Q) = g(N) + w(N,Q)\n";
+            rTB_Source.SelectedText = "    __If g(Q) > g(N) + w(N,Q)\n    __g(Q) = g(N) + w(N,Q)\n";
             rTB_Source.SelectionColor = Color.Purple;
             rTB_Source.SelectedText = "    __prev(Q) = N\n";
             rTB_Source.SelectionColor = Color.DarkGoldenrod;
-            rTB_Source.SelectedText = "    __Nếu tập Open chưa có đỉnh Q, thêm Q vào Open\n";
+            rTB_Source.SelectedText = "    __If Q not in Open, Add Q to Open\n";
             rTB_Source.SelectionColor = Color.DarkSlateGray;
-            rTB_Source.SelectedText = "    __Thêm N vào Close, nếu N là đỉnh đến thì dừng thuật toán";
+            rTB_Source.SelectedText = "    __Add N to Close. If N is Destination Node, Stop";
         }
         void SourceKruskal()
         {
             // rTB_Source = new RichTextBox();
             rTB_Source.Text = "";
-            rTB_Source.SelectedText = "Từ một đỉnh bất kì đến tất cả các đỉnh sao cho chi phí là nhỏ nhất\n\n";
+            rTB_Source.SelectedText = "From any vertex to all vertices such that the cost is minimal\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước khởi tạo\n";
+            rTB_Source.SelectedText = "Initial Step\n";
             rTB_Source.SelectionColor = Color.DarkCyan;
-            rTB_Source.SelectedText = "Sắp xếp các cạnh theo thứ tự tăng dần theo trọng số đưa vào tập Open\nClose = {}\n g = 0\n\n";
+            rTB_Source.SelectedText = "Arrange vertices in order from smallest to largest. Add them to Open\nClose = {}\n g = 0\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước thực thi: \n\n";
+            rTB_Source.SelectedText = "Executing Step: \n\n";
             rTB_Source.SelectionColor = Color.Red;
             rTB_Source.SelectedText = "While";
             rTB_Source.SelectionColor = Color.Black;
@@ -699,27 +699,27 @@ namespace AI
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Chọn cạnh N\n";
+            rTB_Source.SelectedText = " __Select edge N\n";
             rTB_Source.SelectionColor = Color.ForestGreen;
-            rTB_Source.SelectedText = "     __Nhận N, nếu cả hai đỉnh của N không nằm trong tập Close()\n";
+            rTB_Source.SelectedText = "     __If 2 vertices of N not in Close(), Add N\n";
             rTB_Source.SelectionColor = Color.Purple;
             rTB_Source.SelectedText = "           g = g + w(N)\n\n";
             rTB_Source.SelectionColor = Color.LimeGreen;
-            rTB_Source.SelectedText = "     __Nhận N, vì đồ thị sẽ không liên thông nếu không nhận N\n";
+            rTB_Source.SelectedText = "     __Add N, Graph will have connectively.\n";
             rTB_Source.SelectionColor = Color.Purple;
             rTB_Source.SelectedText = "           g = g + w(N)\n\n";
             rTB_Source.SelectionColor = Color.DimGray;
-            rTB_Source.SelectedText = "     __Không nhận N, vì cả hai đỉnh của N đều nằm trong tập Close và đồ thị vẫn liên thông nếu không nhận cạnh N\n";
+            rTB_Source.SelectedText = "     __Eject N. 2 vertices of N existed in Close, graph stil have connectively.\n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "    __Thêm 2 đỉnh của N vào Close";
+            rTB_Source.SelectedText = "    __Add 2 vertices of N existed in Close";
         }
         void SourcePrim()
         {
             // rTB_Source = new RichTextBox();
             rTB_Source.Text = "";
-            rTB_Source.SelectedText = "Từ một đỉnh S cho trước đến tất cả các đỉnh sao cho chi phí là nhỏ nhất\n\n";
+            rTB_Source.SelectedText = "From Starting vertex to all vertices such that the cost is minimal\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước khởi tạo\n";
+            rTB_Source.SelectedText = "Initial Step\n";
             rTB_Source.SelectionColor = Color.DarkCyan;
             rTB_Source.SelectedText = "Open = {}\nClose = {";
             rTB_Source.SelectionColor = Color.Red;
@@ -729,25 +729,25 @@ namespace AI
             rTB_Source.SelectionColor = Color.DarkCyan;
             rTB_Source.SelectedText = "g = {0}\n\n";
             rTB_Source.SelectionColor = Color.Brown;
-            rTB_Source.SelectedText = "Bước thực thi: \n\n";
+            rTB_Source.SelectedText = "Executing Step: \n\n";
             rTB_Source.SelectionColor = Color.Red;
             rTB_Source.SelectedText = "While";
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = "(";
             rTB_Source.SelectionColor = Color.DarkCyan;
-            rTB_Source.SelectedText = "Tổng số đỉnh trong tập Close != Tổng số đỉnh trên đồ thị";
+            rTB_Source.SelectedText = "Number of vertices in Close != Number of vertices in graph";
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "   B1_Chọn N (đỉnh cuối dùng trong tập Close)\n\n   B2_Mở các cạnh kề với N mà không có trong tập Open, rồi thêm những cạnh này vào tập Open\n\n";
+            rTB_Source.SelectedText = "   Step 1 _ Select N (last vertex in Close)\n\n   Step 2 _ Add adjacent edges with N which not existed in Open\n\n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "   B3_Xét trong tập Open, chọn cạnh nhỏ nhất là NQ\n\n";
+            rTB_Source.SelectedText = "   Step 3 _Select minimum edge NQ in Open\n\n";
             rTB_Source.SelectionColor = Color.DimGray;
-            rTB_Source.SelectedText = "   B4_Nếu NQ là cạnh nhỏ nhất trong Open, mà Q đã tồn tại trong Close, xóa NQ ra khỏi Open, quay lại B3\n\n";
+            rTB_Source.SelectedText = "   Step 4 _If Q existed in Close, drop NQ out of Open, roll back to Step 3\n\n";
             rTB_Source.SelectionColor = Color.Purple;
-            rTB_Source.SelectedText = "   B5_g = g + w(N,Q)\n\n";
+            rTB_Source.SelectedText = "   Step 5 _ g = g + w(N,Q)\n\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "   B6_Thêm Q vào Close, nếu Q chưa tồn tại trong Close";
+            rTB_Source.SelectedText = "   Step 6 _ If Q not in Close, Add Q";
         }
         //-----------------------------------------------------//Thuc thi thuat toan//-----------------------------------------------------------------------------------------------------------------
         bool count = true;
@@ -765,7 +765,7 @@ namespace AI
             XetLienThong.DoThi doThi = new XetLienThong.DoThi();
             doThi.iMaTran = Weight;
             doThi.iSoDinh = coutNode;
-            if (!xetLienThong.xetLienThong(doThi)) MessageBox.Show("Đồ thị không hợp lệ (không liên thông) !!!", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (!xetLienThong.xetLienThong(doThi)) MessageBox.Show("Invalid graph (Unconnectedness) !!!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
                 if (rd_Dijkstra.Checked)
@@ -785,8 +785,8 @@ namespace AI
                     }
                     catch
                     {
-                        if (count) MessageBox.Show("Vui lòng chọn đỉnh bắt đầu và đỉnh kết thúc", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        else MessageBox.Show("Đã thực thi, có thể nhấn \"Next\" để tiếp tục", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (count) MessageBox.Show("Please choose Starting/Destination Vertices", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else MessageBox.Show("Press \"Next\" to continue", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     dinhDuongDi = kieuDuongDi.TimDuong(data); // [n-1..2]tap hop cac dinh da di qua khi tim duong di ngan nhat, [0] la chi phi, [1] dinh den, [n] dinh dau 
                     VeDuongDiDijsktra();
@@ -805,7 +805,7 @@ namespace AI
                     }
                     catch
                     {
-                        if (!count) MessageBox.Show("Đã thực thi, có thể nhấn \"Next\" để tiếp tục", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!count) MessageBox.Show("Press \"Next\" to continue", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     dinhDuongDi = kruskal.TimDuong();
                     VeDuongDiKruskal();
@@ -831,8 +831,8 @@ namespace AI
                     }
                     catch
                     {
-                        if (count) MessageBox.Show("Vui lòng chọn đỉnh bắt đầu ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        else MessageBox.Show("Đã thực thi, có thể nhấn \"Next\" để tiếp tục", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (count) MessageBox.Show("Please choose Starting Node ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        else MessageBox.Show("Press \"Next\" to continue", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 if (history.Tutorial.Count > 1)
@@ -854,7 +854,7 @@ namespace AI
             //MessageBox.Show(step.ToString());
             if (dinhDuongDi.Count == 0)
             {
-                MessageBox.Show("Vui lòng chọn \"Thực thi\"", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Press \"START\"", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -1149,7 +1149,7 @@ namespace AI
             }
             else
             {
-                MessageBox.Show("Chỉ đọc được đồ thị đơn vô hướng thôi !!! ", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("UNDIRECTED GRAPH Only !!! ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1163,7 +1163,27 @@ namespace AI
 
         }
 
-        
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void la_Chiphi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textClose_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
 

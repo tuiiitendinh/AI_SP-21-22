@@ -26,7 +26,7 @@ namespace AI
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (!kt) {
-                MessageBox.Show("Lỗi nhập liệu", "Hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Input Error!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
             }
 
@@ -120,7 +120,7 @@ namespace AI
                     catch
                     {
                         kt = false;
-                        MessageBox.Show("Ma trận không phù hợp", "Lỗi nhập liệu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid matrix", "Input Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                     }
                 }
