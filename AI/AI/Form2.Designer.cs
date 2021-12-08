@@ -47,7 +47,7 @@ namespace AI
             this.label1.Location = new System.Drawing.Point(37, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 28);
+            this.label1.Size = new System.Drawing.Size(196, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Number of vetices";
             // 
@@ -69,7 +69,7 @@ namespace AI
             this.trackBar1.Maximum = 20;
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(278, 56);
+            this.trackBar1.Size = new System.Drawing.Size(248, 56);
             this.trackBar1.SmallChange = 0;
             this.trackBar1.TabIndex = 13;
             this.trackBar1.Value = 1;
@@ -89,10 +89,10 @@ namespace AI
             this.so_dinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.so_dinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.so_dinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.so_dinh.Location = new System.Drawing.Point(310, 65);
+            this.so_dinh.Location = new System.Drawing.Point(280, 65);
             this.so_dinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.so_dinh.Name = "so_dinh";
-            this.so_dinh.Size = new System.Drawing.Size(78, 22);
+            this.so_dinh.Size = new System.Drawing.Size(58, 39);
             this.so_dinh.TabIndex = 16;
             this.so_dinh.Text = "sodinh";
             // 
@@ -117,14 +117,14 @@ namespace AI
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Location = new System.Drawing.Point(26, 259);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 80);
             this.button2.TabIndex = 11;
-            this.button2.Text = "Ramdom";
+            this.button2.Text = "Ramdom Weights";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -148,7 +148,7 @@ namespace AI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1509, 791);
+            this.ClientSize = new System.Drawing.Size(1343, 593);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -162,7 +162,7 @@ namespace AI
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tạo bản đồ";
+            this.Text = "Create Graph";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);

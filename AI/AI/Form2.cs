@@ -94,7 +94,7 @@ namespace AI
             {
                 if (!textBox.ReadOnly)
                 {
-                    int trongso = rnd.Next(-700, 1001);
+                    int trongso = rnd.Next(-100, 100);
                     if (trongso < 0) textBox.Text = "∞";
                     else textBox.Text = trongso.ToString();
                    

@@ -1183,11 +1183,15 @@ namespace AI
 
         }
 
+        private void g_Source_Enter(object sender, EventArgs e)
+        {
 
+        }
 
+        private void textPrev_TextChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void gViewer1_Click(object sender, EventArgs e)
