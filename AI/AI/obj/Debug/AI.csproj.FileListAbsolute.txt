@@ -112,3 +112,23 @@ C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.csproj.CopyComplete
 C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.exe
 C:\Users\ASUS\Desktop\AI\AI\AI\obj\Debug\AI.pdb
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\AI.exe.config
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\AI.exe
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\AI.pdb
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.dll
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.xml
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.AssemblyReference.cache
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.SuggestedBindingRedirects.cache
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.Form2.resources
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.Main.resources
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.NghiVan.resources
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.Properties.Resources.resources
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CopyComplete
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.exe
+H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.pdb
