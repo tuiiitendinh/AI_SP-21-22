@@ -34,9 +34,9 @@ namespace AI
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.so_dinh = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.roundedButtonNew3 = new AI.RoundedButtonNew();
+            this.roundedButtonNew2 = new AI.RoundedButtonNew();
+            this.roundedButtonNew1 = new AI.RoundedButtonNew();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@ namespace AI
             this.label1.Location = new System.Drawing.Point(120, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 29);
+            this.label1.Size = new System.Drawing.Size(186, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Number of vetices";
             // 
@@ -96,52 +96,64 @@ namespace AI
             this.so_dinh.TabIndex = 16;
             this.so_dinh.Text = "sodinh";
             // 
-            // button3
+            // roundedButtonNew3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1242, 36);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(268, 81);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Save";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.roundedButtonNew3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew3.BorderSize = 2;
+            this.roundedButtonNew3.ControlText = "Save";
+            this.roundedButtonNew3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew3.FlatAppearance.BorderSize = 0;
+            this.roundedButtonNew3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonNew3.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew3.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonNew3.Location = new System.Drawing.Point(1228, 37);
+            this.roundedButtonNew3.Name = "roundedButtonNew3";
+            this.roundedButtonNew3.Radius = 19;
+            this.roundedButtonNew3.Size = new System.Drawing.Size(277, 84);
+            this.roundedButtonNew3.TabIndex = 21;
+            this.roundedButtonNew3.TabStop = false;
+            this.roundedButtonNew3.Text = "Save";
+            this.roundedButtonNew3.Click += new System.EventHandler(this.roundedButtonNew3_Click);
             // 
-            // button2
+            // roundedButtonNew2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(888, 37);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(268, 80);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Ramdom Weights";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.roundedButtonNew2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew2.BorderSize = 2;
+            this.roundedButtonNew2.ControlText = "Ramdom Weights";
+            this.roundedButtonNew2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew2.FlatAppearance.BorderSize = 0;
+            this.roundedButtonNew2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonNew2.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew2.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonNew2.Location = new System.Drawing.Point(867, 37);
+            this.roundedButtonNew2.Name = "roundedButtonNew2";
+            this.roundedButtonNew2.Radius = 19;
+            this.roundedButtonNew2.Size = new System.Drawing.Size(278, 84);
+            this.roundedButtonNew2.TabIndex = 20;
+            this.roundedButtonNew2.TabStop = false;
+            this.roundedButtonNew2.Text = "Ramdom Weights";
+            this.roundedButtonNew2.Click += new System.EventHandler(this.roundedButtonNew2_Click);
             // 
-            // button1
+            // roundedButtonNew1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(536, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 80);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Create Matrix";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.roundedButtonNew1.BackColor = System.Drawing.Color.White;
+            this.roundedButtonNew1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew1.BorderSize = 2;
+            this.roundedButtonNew1.ControlText = "Create Matrix";
+            this.roundedButtonNew1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew1.FlatAppearance.BorderSize = 0;
+            this.roundedButtonNew1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundedButtonNew1.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew1.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonNew1.Location = new System.Drawing.Point(513, 37);
+            this.roundedButtonNew1.Name = "roundedButtonNew1";
+            this.roundedButtonNew1.Radius = 19;
+            this.roundedButtonNew1.Size = new System.Drawing.Size(288, 84);
+            this.roundedButtonNew1.TabIndex = 18;
+            this.roundedButtonNew1.TabStop = false;
+            this.roundedButtonNew1.Text = "Create Matrix";
+            this.roundedButtonNew1.UseVisualStyleBackColor = false;
+            this.roundedButtonNew1.Click += new System.EventHandler(this.roundedButtonNew1_Click);
             // 
             // Form2
             // 
@@ -149,9 +161,9 @@ namespace AI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1684, 828);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.roundedButtonNew3);
+            this.Controls.Add(this.roundedButtonNew2);
+            this.Controls.Add(this.roundedButtonNew1);
             this.Controls.Add(this.so_dinh);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.trackBar1);
@@ -176,8 +188,8 @@ namespace AI
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label so_dinh;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private RoundedButtonNew roundedButtonNew1;
+        private RoundedButtonNew roundedButtonNew2;
+        private RoundedButtonNew roundedButtonNew3;
     }
 }

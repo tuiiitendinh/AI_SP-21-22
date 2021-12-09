@@ -31,7 +31,7 @@ namespace AI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation3 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
+            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation1 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rd_Dijkstra = new System.Windows.Forms.RadioButton();
@@ -51,12 +51,12 @@ namespace AI
             this.la_Chiphi = new System.Windows.Forms.Label();
             this.g_Source = new System.Windows.Forms.GroupBox();
             this.rTB_Source = new System.Windows.Forms.RichTextBox();
-            this.btn_ReadFile = new System.Windows.Forms.Button();
             this.rTB_HuongDan = new System.Windows.Forms.RichTextBox();
-            this.btn_Tao = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Run = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
+            this.roundedButtonNew2 = new AI.RoundedButtonNew();
+            this.roundedButtonNew1 = new AI.RoundedButtonNew();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.g_Source.SuspendLayout();
@@ -94,7 +94,7 @@ namespace AI
             this.gViewer1.SaveInVectorFormatEnabled = true;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = false;
-            this.gViewer1.Transform = planeTransformation3;
+            this.gViewer1.Transform = planeTransformation1;
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
             this.gViewer1.ZoomF = 1D;
@@ -241,16 +241,6 @@ namespace AI
             this.rTB_Source.Name = "rTB_Source";
             this.rTB_Source.ReadOnly = true;
             // 
-            // btn_ReadFile
-            // 
-            this.btn_ReadFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.btn_ReadFile.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.btn_ReadFile, "btn_ReadFile");
-            this.btn_ReadFile.ForeColor = System.Drawing.Color.White;
-            this.btn_ReadFile.Name = "btn_ReadFile";
-            this.btn_ReadFile.UseVisualStyleBackColor = false;
-            this.btn_ReadFile.Click += new System.EventHandler(this.btn_ReadFile_Click);
-            // 
             // rTB_HuongDan
             // 
             this.rTB_HuongDan.BackColor = System.Drawing.SystemColors.Control;
@@ -259,27 +249,12 @@ namespace AI
             this.rTB_HuongDan.ReadOnly = true;
             this.rTB_HuongDan.TextChanged += new System.EventHandler(this.rTB_HuongDan_TextChanged);
             // 
-            // btn_Tao
-            // 
-            this.btn_Tao.AllowDrop = true;
-            this.btn_Tao.AutoEllipsis = true;
-            this.btn_Tao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.btn_Tao, "btn_Tao");
-            this.btn_Tao.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btn_Tao.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_Tao.FlatAppearance.BorderSize = 0;
-            this.btn_Tao.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_Tao.Name = "btn_Tao";
-            this.btn_Tao.UseVisualStyleBackColor = false;
-            this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
-            // 
             // btn_Next
             // 
             this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.btn_Next.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Next, "btn_Next");
             this.btn_Next.ForeColor = System.Drawing.Color.Black;
-            this.btn_Next.Image = global::AI.Properties.Resources.next_button3;
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.UseVisualStyleBackColor = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
@@ -290,7 +265,6 @@ namespace AI
             this.btn_Run.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Run, "btn_Run");
             this.btn_Run.ForeColor = System.Drawing.Color.White;
-            this.btn_Run.Image = global::AI.Properties.Resources.start_button;
             this.btn_Run.Name = "btn_Run";
             this.btn_Run.UseVisualStyleBackColor = false;
             this.btn_Run.Click += new System.EventHandler(this.btn_Run_Click);
@@ -301,26 +275,57 @@ namespace AI
             this.btn_Previous.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Previous, "btn_Previous");
             this.btn_Previous.ForeColor = System.Drawing.Color.Black;
-            this.btn_Previous.Image = global::AI.Properties.Resources.previos_button1;
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.UseVisualStyleBackColor = false;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
+            // 
+            // roundedButtonNew2
+            // 
+            this.roundedButtonNew2.BackColor = System.Drawing.Color.White;
+            this.roundedButtonNew2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew2.BorderSize = 2;
+            this.roundedButtonNew2.ControlText = "Creare Matrix";
+            this.roundedButtonNew2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew2.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.roundedButtonNew2, "roundedButtonNew2");
+            this.roundedButtonNew2.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonNew2.Name = "roundedButtonNew2";
+            this.roundedButtonNew2.Radius = 19;
+            this.roundedButtonNew2.TabStop = false;
+            this.roundedButtonNew2.UseVisualStyleBackColor = false;
+            this.roundedButtonNew2.Click += new System.EventHandler(this.roundedbtn_Tao_Click);
+            // 
+            // roundedButtonNew1
+            // 
+            this.roundedButtonNew1.BackColor = System.Drawing.Color.White;
+            this.roundedButtonNew1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew1.BorderSize = 2;
+            this.roundedButtonNew1.ControlText = "Read File";
+            this.roundedButtonNew1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.roundedButtonNew1.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.roundedButtonNew1, "roundedButtonNew1");
+            this.roundedButtonNew1.ForeColor = System.Drawing.Color.White;
+            this.roundedButtonNew1.Name = "roundedButtonNew1";
+            this.roundedButtonNew1.Radius = 19;
+            this.roundedButtonNew1.TabStop = false;
+            this.roundedButtonNew1.UseVisualStyleBackColor = false;
+            this.roundedButtonNew1.Click += new System.EventHandler(this.roundedbtn_ReadFile_Click);
             // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Controls.Add(this.roundedButtonNew2);
+            this.Controls.Add(this.roundedButtonNew1);
             this.Controls.Add(this.rTB_HuongDan);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Run);
-            this.Controls.Add(this.btn_Tao);
             this.Controls.Add(this.g_Source);
             this.Controls.Add(this.la_Chiphi);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btn_ReadFile);
             this.Controls.Add(this.gViewer1);
             this.Controls.Add(this.textBox1);
             this.MaximizeBox = false;
@@ -339,7 +344,6 @@ namespace AI
         #endregion
 
         private Microsoft.Msagl.GraphViewerGdi.GViewer gViewer1;
-        private System.Windows.Forms.Button btn_ReadFile;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.RadioButton rd_Dijkstra;
         private System.Windows.Forms.RadioButton rd_Kruskal;
@@ -362,6 +366,7 @@ namespace AI
         private System.Windows.Forms.RichTextBox rTB_Source;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox rTB_HuongDan;
-        private System.Windows.Forms.Button btn_Tao;
+        private RoundedButtonNew roundedButtonNew1;
+        private RoundedButtonNew roundedButtonNew2;
     }
 }

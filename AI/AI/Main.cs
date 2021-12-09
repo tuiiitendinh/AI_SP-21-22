@@ -56,7 +56,7 @@ namespace AI
         };
         History history = new History();
         //----------------------------------------------------------//Doc File va Tao Graph//------------------------------------------------------------------------------------------------------------
-        private void btn_ReadFile_Click(object sender, EventArgs e) 
+        private void roundedbtn_ReadFile_Click(object sender, EventArgs e)
         {
             Reset();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -150,7 +150,7 @@ namespace AI
                                     E.Attr.ArrowheadAtTarget = Msagl.ArrowStyle.None;
                                     E.Attr.Weight = Weight[i, j];
                                     E.LabelText = Weight[i, j].ToString();
-                                   // MessageBox.Show(Node[i] + Node[j]);
+                                    // MessageBox.Show(Node[i] + Node[j]);
                                 }
 
                             }
@@ -171,18 +171,20 @@ namespace AI
         //--------------------------------------------------//Ham bo tro//----------------------------------------------------------------------------------------------------------------
         int NodeToIndex(string node) // tim index cua dinh thong qua ten dinh
         {
-           // int index;
+            // int index;
             for (int i = 0; i < coutNode; i++)
             {
-                if(node == Node[i])
+                if (node == Node[i])
                 {
                     return i;
                 }
             }
             return -1;
         }
-        string ToId (int i,int j) {
-            if (j  > i) {
+        string ToId(int i, int j)
+        {
+            if (j > i)
+            {
                 return i.ToString() + j.ToString();
             }
             return j.ToString() + i.ToString();
@@ -197,34 +199,34 @@ namespace AI
         }
         void VeDuongDiDijsktra()
         {
-            for(int i = dinhDuongDi.Count-1; i > 0; i--)
+            for (int i = dinhDuongDi.Count - 1; i > 0; i--)
             {
                 graph.FindNode(Node[dinhDuongDi[i] - 1]).Attr.FillColor = Msagl.Color.GreenYellow;
-                if(i > 1)
+                if (i > 1)
                 {
-                    graph.EdgeById(ToId(dinhDuongDi[i-1] - 1,dinhDuongDi[i] - 1)).Attr.Color = Msagl.Color.GreenYellow;
+                    graph.EdgeById(ToId(dinhDuongDi[i - 1] - 1, dinhDuongDi[i] - 1)).Attr.Color = Msagl.Color.GreenYellow;
                 }
             }
         }
         void VeDuongDiKruskal()
         {
-            for(int i = 1;i < dinhDuongDi.Count - 1; i += 2)
+            for (int i = 1; i < dinhDuongDi.Count - 1; i += 2)
             {
                 graph.FindNode(Node[dinhDuongDi[i]]).Attr.FillColor = Msagl.Color.GreenYellow;
                 graph.FindNode(Node[dinhDuongDi[i + 1]]).Attr.FillColor = Msagl.Color.GreenYellow;
                 graph.EdgeById(ToId(dinhDuongDi[i], dinhDuongDi[i + 1])).Attr.Color = Msagl.Color.GreenYellow;
             }
         }
-        List<Tuple<string,string>> SortEdge(List<Tuple<string,string>> nameEdge,List<int> valueEdge)
+        List<Tuple<string, string>> SortEdge(List<Tuple<string, string>> nameEdge, List<int> valueEdge)
         {
-            for(int i = 0; i< valueEdge.Count - 1; i++)
+            for (int i = 0; i < valueEdge.Count - 1; i++)
             {
-                for(int j = i + 1; j < valueEdge.Count; j++)
+                for (int j = i + 1; j < valueEdge.Count; j++)
                 {
-                    if(valueEdge[i] > valueEdge[j])
+                    if (valueEdge[i] > valueEdge[j])
                     {
                         int hv = valueEdge[i];
-                        Tuple<string,string> hn = nameEdge[i];
+                        Tuple<string, string> hn = nameEdge[i];
                         valueEdge[i] = valueEdge[j];
                         nameEdge[i] = nameEdge[j];
                         valueEdge[j] = hv;
@@ -253,7 +255,7 @@ namespace AI
             dinhDuongDi.Clear();
             Open.Clear();
             Close.Clear();
-            for(int i = 0; i< 100; i++)
+            for (int i = 0; i < 100; i++)
             {
                 g[i] = 0;
                 prev[i] = -1;
@@ -272,7 +274,7 @@ namespace AI
         RichTextBox tutorial = new RichTextBox();
         void HuongdanDijkstra()
         {
-            tutorial =  new RichTextBox();
+            tutorial = new RichTextBox();
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.Brown;
             tutorial.SelectedText = "Begin!\n\n";
@@ -320,7 +322,7 @@ namespace AI
                     if (g[NodeToIndex(Open[i])] < min)
                     {
                         min = g[NodeToIndex(Open[i])];
-                        chosen =NodeToIndex(Open[i]);
+                        chosen = NodeToIndex(Open[i]);
                         indexChosen = i;
                     }
                 }
@@ -375,7 +377,7 @@ namespace AI
                             tutorial.SelectedText = $"# {Node[i]}\n existed in Open!\n\n";
                         }
                     }
-                    else if(Weight[chosen, i] >= 0 && Close.Contains(Node[i]))
+                    else if (Weight[chosen, i] >= 0 && Close.Contains(Node[i]))
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DarkSlateGray;
@@ -384,7 +386,7 @@ namespace AI
                 }
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.DarkSlateGray;
-                tutorial.SelectedText = $"Add {Node[chosen]} to Close\n\n";  
+                tutorial.SelectedText = $"Add {Node[chosen]} to Close\n\n";
                 history.Tutorial.Add(tutorial);
                 history.line.Add(new List<string>(line));
                 history.hClose.Add(new List<string>(Close));
@@ -394,7 +396,7 @@ namespace AI
                     history.hprev[step, i] = prev[i];
                 }
             }
-            
+
         }
         //======================================================//KRUSKAL//============================================================================================
         void HuongdanKruskal()
@@ -409,21 +411,21 @@ namespace AI
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.DarkCyan;
             tutorial.SelectedText = "Arrange vertices in order from smallest to largest.\nAdd them to Open.\n\nClose = {}\n\n g = 0\n\n";
-            for(int i = 0; i < coutNode -1 ; i++)
+            for (int i = 0; i < coutNode - 1; i++)
             {
-                for(int j = i+1; j < coutNode; j++)
+                for (int j = i + 1; j < coutNode; j++)
                 {
                     if (Weight[i, j] > 0)
                     {
                         sortLine.Add(Weight[i, j]);
-                        sortLineName.Add(new Tuple<string, string>(Node[i],Node[j]));
+                        sortLineName.Add(new Tuple<string, string>(Node[i], Node[j]));
                     }
                 }
             }
-            sortLineName = SortEdge(sortLineName,sortLine); // sắp xếp Edge từ nhỏ -> lớn (trọng số)
-            sortLineName.ForEach(delegate (Tuple<string,string> tuple)
+            sortLineName = SortEdge(sortLineName, sortLine); // sắp xếp Edge từ nhỏ -> lớn (trọng số)
+            sortLineName.ForEach(delegate (Tuple<string, string> tuple)
             {
-                Open.Add(tuple.Item1+tuple.Item2);
+                Open.Add(tuple.Item1 + tuple.Item2);
             });
             history.Tutorial.Add(tutorial);
             history.hOpen.Add(new List<string>(Open));
@@ -451,16 +453,17 @@ namespace AI
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.OrangeRed;
                 tutorial.SelectedText = $"Selecting {Open[0]}\n\n";
-                if (Close.Contains(chosen.Item1)&&Close.Contains(chosen.Item2))
+                if (Close.Contains(chosen.Item1) && Close.Contains(chosen.Item2))
                 {
-                   if (!checkEgde.Contains(ToId(NodeToIndex(chosen.Item1),NodeToIndex(chosen.Item2)))){
+                    if (!checkEgde.Contains(ToId(NodeToIndex(chosen.Item1), NodeToIndex(chosen.Item2))))
+                    {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DimGray;
                         tutorial.SelectedText = $"# Do not Select {Open[0]}!\n({chosen.Item1}, {chosen.Item2} existed in Close)\n\n";
                         history.hprev[NodeToIndex(chosen.Item1), NodeToIndex(chosen.Item2)] = 0;
-                   }
-                   else
-                   {
+                    }
+                    else
+                    {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.LimeGreen;
                         tutorial.SelectedText = $"# Select {Open[0]}\n (No connection of\n {chosen.Item1}, {chosen.Item2} existed in Close)\n\n";
@@ -490,9 +493,10 @@ namespace AI
                     history.hprev[NodeToIndex(chosen.Item1), NodeToIndex(chosen.Item2)] = 1;
                     node.Add(chosen.Item1);
                     node.Add(chosen.Item2);
-                    line.Add(NodeToIndex(chosen.Item1).ToString()+NodeToIndex(chosen.Item2).ToString());
+                    line.Add(NodeToIndex(chosen.Item1).ToString() + NodeToIndex(chosen.Item2).ToString());
                     history.line.Add(new List<string>(line));
-                    if (!Close.Contains(chosen.Item1)) {
+                    if (!Close.Contains(chosen.Item1))
+                    {
                         Close.Add(chosen.Item1);
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
@@ -530,7 +534,7 @@ namespace AI
         void HuongDaPrim(int start)
         {
             List<string> bug = new List<string>();
-            List<Tuple<int,int, int>> egde = new List<Tuple<int,int, int>>();
+            List<Tuple<int, int, int>> egde = new List<Tuple<int, int, int>>();
             tutorial = new RichTextBox();
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.Brown;
@@ -553,12 +557,12 @@ namespace AI
             history.line.Add(new List<string>());
             history.Node.Add(new List<string>());
             history.Tutorial.Add(tutorial);
-            while (coutNode !=history.hClose.Count-2)
+            while (coutNode != history.hClose.Count - 2)
             {
                 step++;
                 List<string> line = new List<string>();
                 List<string> lineNode = new List<string>();
-                int indexChosen = NodeToIndex(Close[Close.Count-1]);
+                int indexChosen = NodeToIndex(Close[Close.Count - 1]);
                 tutorial = new RichTextBox();
                 tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                 tutorial.SelectionColor = Color.Brown;
@@ -572,7 +576,7 @@ namespace AI
                     if (Weight[indexChosen, i] >= 0 && !bug.Contains(ToId(i, indexChosen)) && !Open.Contains(ToNode(i, indexChosen)))
                     {
                         Open.Add(ToNode(indexChosen, i));
-                        egde.Add(new Tuple<int,int, int>(indexChosen,i,Weight[indexChosen,i]));
+                        egde.Add(new Tuple<int, int, int>(indexChosen, i, Weight[indexChosen, i]));
                         line.Add(ToId(indexChosen, i));
                         lineNode.Add(Node[indexChosen] + Node[i]);
                     }
@@ -586,14 +590,14 @@ namespace AI
                 history.hOpen.Add(new List<string>(Open));
                 history.line.Add(line);
                 egde.Sort((a, b) => a.Item3.CompareTo(b.Item3));
-               // MessageBox.Show(string.Join(" ", egde));
+                // MessageBox.Show(string.Join(" ", egde));
                 for (int i = 0; i < egde.Count; i++)
                 {
                     if (!Close.Contains(Node[egde[i].Item2]))
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Green;
-                        tutorial.SelectedText = $"Select minimum node {Node[egde[i].Item1]+Node[egde[i].Item2]}\n  out of \n({string.Join(" , ", Open)})\n in Open\n\n";
+                        tutorial.SelectedText = $"Select minimum node {Node[egde[i].Item1] + Node[egde[i].Item2]}\n  out of \n({string.Join(" , ", Open)})\n in Open\n\n";
                         history.hg[step, 1] = g + Weight[egde[i].Item1, egde[i].Item2];
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.Purple;
@@ -622,16 +626,16 @@ namespace AI
                 history.Tutorial.Add(tutorial);
                 history.hClose.Add(new List<string>(Close));
             }
-/*            string mess = "";
-            for (int i = 0; i < step; i++)
-            {
-                mess += string.Join(" ", history.Node[i]) + "\n\n";
-                mess += string.Join(" ", history.line[i]) + "\n\n";
-                mess += string.Join(" ", history.hOpen[i]) + "\n\n";
-                mess += string.Join(" ", history.hClose[i]) + "\n\n";
-                MessageBox.Show(mess);
-                mess = "";
-            }*/
+            /*            string mess = "";
+                        for (int i = 0; i < step; i++)
+                        {
+                            mess += string.Join(" ", history.Node[i]) + "\n\n";
+                            mess += string.Join(" ", history.line[i]) + "\n\n";
+                            mess += string.Join(" ", history.hOpen[i]) + "\n\n";
+                            mess += string.Join(" ", history.hClose[i]) + "\n\n";
+                            MessageBox.Show(mess);
+                            mess = "";
+                        }*/
         }
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void Form2_Load_1(object sender, EventArgs e)
@@ -641,7 +645,7 @@ namespace AI
         //--------------------------------------------------------------//Source//--------------------------------------------------------------------------------
         void SourceDijsktra()
         {
-           // rTB_Source = new RichTextBox();
+            // rTB_Source = new RichTextBox();
             rTB_Source.Text = "";
             rTB_Source.SelectedText = "Each corresponding vertex g(N)\n\nInital cost from Starting to Destination Node\n\nClose: List of arrivred vertices\n\nOpen: List of pending vertices\n\n";
             rTB_Source.SelectionColor = Color.Brown;
@@ -751,13 +755,13 @@ namespace AI
         }
         //-----------------------------------------------------//Thuc thi thuat toan//-----------------------------------------------------------------------------------------------------------------
         bool count = true;
-        private void btn_Run_Click(object sender, EventArgs e) 
+        private void btn_Run_Click(object sender, EventArgs e)
         {
             if (gViewer1.Graph != null)
             {
                 cls();
             }
-            if(dinhDuongDi.Count > 0)
+            if (dinhDuongDi.Count > 0)
             {
                 Reset();
             }
@@ -866,22 +870,22 @@ namespace AI
                 string tg = "";
                 string tprev = "";
                 lable = history.Tutorial[step];
-                
+
                 lable.Width = 370;
                 lable.Height = 370;
                 lable.ReadOnly = true;
-                lable.Location= new Point(0,0);
+                lable.Location = new Point(0, 0);
                 lable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
                 rTB_HuongDan.Controls.Clear();
                 rTB_HuongDan.Controls.Add(lable);
-                if(step > 0) btn_Previous.Enabled = true;
+                if (step > 0) btn_Previous.Enabled = true;
                 if (step == 0) cls();
                 if (rd_Dijkstra.Checked)
                 {
                     if (step == history.Node.Count - 1)
                     {
                         int star = history.hprev[step, NodeToIndex(viTri[1])];
-                        while(star != -1)
+                        while (star != -1)
                         {
                             graph.FindNode(Node[star]).Attr.FillColor = Msagl.Color.Green;
                             star = history.hprev[step, star];
@@ -908,7 +912,7 @@ namespace AI
                     textG.Text = tg;
                     textPrev.Text = tprev;
                 }
-                else if(rd_Kruskal.Checked)
+                else if (rd_Kruskal.Checked)
                 {
                     if (step == 0) textG.Text = history.hg[step, 0].ToString();
                     if (step > 0)
@@ -921,7 +925,7 @@ namespace AI
                             graph.EdgeById(history.line[step][0]).Attr.Color = Msagl.Color.ForestGreen;
                             textG.Text = history.hg[step, 0].ToString();
                         }
-                        else if(history.hprev[NodeToIndex(history.Node[step][0]), NodeToIndex(history.Node[step][1])] == 2)
+                        else if (history.hprev[NodeToIndex(history.Node[step][0]), NodeToIndex(history.Node[step][1])] == 2)
                         {
                             graph.EdgeById(history.line[step][0]).Attr.Color = Msagl.Color.LimeGreen;
                             graph.EdgeById(history.line[step][0]).Label.FontColor = Msagl.Color.LimeGreen;
@@ -936,10 +940,10 @@ namespace AI
                 }
                 else
                 {
-                    if (step == 0) if(history.hg[step,1]>0)textG.Text = history.hg[step, 1].ToString();
+                    if (step == 0) if (history.hg[step, 1] > 0) textG.Text = history.hg[step, 1].ToString();
                     if (step == history.Node.Count - 1)
                     {
-                        if(history.hg[step,1]>0)textG.Text = history.hg[step, 1].ToString();
+                        if (history.hg[step, 1] > 0) textG.Text = history.hg[step, 1].ToString();
                         history.hClose[step].ForEach(delegate (string start)
                         {
                             graph.FindNode(start).Attr.FillColor = Msagl.Color.Green;
@@ -947,24 +951,24 @@ namespace AI
                     }
                     if (step > 0 && step != history.Node.Count - 1)
                     {
-                       // MessageBox.Show(history.Node[step][step - 1]);
-                        graph.FindNode(history.Node[step][history.Node[step].Count-1]).Attr.FillColor = Msagl.Color.OrangeRed;
-                        if(history.hg[step,1]>0)textG.Text = history.hg[step, 1].ToString();
+                        // MessageBox.Show(history.Node[step][step - 1]);
+                        graph.FindNode(history.Node[step][history.Node[step].Count - 1]).Attr.FillColor = Msagl.Color.OrangeRed;
+                        if (history.hg[step, 1] > 0) textG.Text = history.hg[step, 1].ToString();
                         history.line[step].ForEach(delegate (String name)
                         {
                             graph.EdgeById(name).Attr.Color = Msagl.Color.OrangeRed;
                         });
                         // MessageBox.Show(ToId(history.hg[step, 0], history.hprev[step, 0]));
                         string edge = ToId(history.hg[step, 0], history.hprev[step, 0]);
-                        if (edge!="00") graph.EdgeById(edge).Attr.Color = Msagl.Color.Green;
+                        if (edge != "00") graph.EdgeById(edge).Attr.Color = Msagl.Color.Green;
                     }
                 }
                 textOpen.Text = string.Join(" | ", history.hOpen[step]);
-                textClose.Text= string.Join(" | ", history.hClose[step]);
+                textClose.Text = string.Join(" | ", history.hClose[step]);
                 gViewer1.Refresh();
-                ++ step;
+                ++step;
             }
-            
+
         }
         //--------------------------------------------------------------//Nut Previous//------------------------------------------------------------------------------------------------------------------
         private void btn_Previous_Click(object sender, EventArgs e)
@@ -1014,7 +1018,7 @@ namespace AI
             }
             else if (rd_Kruskal.Checked)
             {
-                if(step == 0) textG.Text = history.hg[step, 0].ToString();
+                if (step == 0) textG.Text = history.hg[step, 0].ToString();
                 if (step > 0)
                 {
                     //MessageBox.Show($"{NodeToIndex(history.Node[step][0])}, {NodeToIndex(history.Node[step][1])} || {history.Node[step][0]},{history.Node[step][1]}");
@@ -1023,13 +1027,13 @@ namespace AI
                         graph.FindNode(history.Node[step][0]).Attr.FillColor = Msagl.Color.White;
                         graph.FindNode(history.Node[step][1]).Attr.FillColor = Msagl.Color.White;
                         graph.EdgeById(history.line[step][0]).Attr.Color = Msagl.Color.Black;
-                        textG.Text = history.hg[step-1, 0].ToString();
+                        textG.Text = history.hg[step - 1, 0].ToString();
                     }
                     if (history.hprev[NodeToIndex(history.Node[step][0]), NodeToIndex(history.Node[step][1])] == 2)
                     {
                         graph.EdgeById(history.line[step][0]).Attr.Color = Msagl.Color.Black;
                         graph.EdgeById(history.line[step][0]).Label.FontColor = Msagl.Color.Black;
-                        textG.Text = history.hg[step-1, 0].ToString();
+                        textG.Text = history.hg[step - 1, 0].ToString();
                     }
                     else
                     {
@@ -1040,10 +1044,10 @@ namespace AI
             }
             else
             {
-                if (step == 0) if(history.hg[step-1,1]>0)textG.Text = history.hg[step-1, 1].ToString();
+                if (step == 0) if (history.hg[step - 1, 1] > 0) textG.Text = history.hg[step - 1, 1].ToString();
                 if (step == history.Node.Count - 1)
                 {
-                    if(history.hg[step-1,1]>0)textG.Text = history.hg[step-1, 1].ToString();
+                    if (history.hg[step - 1, 1] > 0) textG.Text = history.hg[step - 1, 1].ToString();
                     history.hClose[step].ForEach(delegate (string start)
                     {
                         graph.FindNode(start).Attr.FillColor = Msagl.Color.OrangeRed;
@@ -1053,7 +1057,7 @@ namespace AI
                 if (step > 0 && step != history.Node.Count - 1)
                 {
                     // MessageBox.Show(history.Node[step][step - 1]);
-                    if(history.hg[step-1,1]>0)textG.Text = history.hg[step-1, 1].ToString();
+                    if (history.hg[step - 1, 1] > 0) textG.Text = history.hg[step - 1, 1].ToString();
                     graph.FindNode(history.Node[step][history.Node[step].Count - 1]).Attr.FillColor = Msagl.Color.White;
                     history.line[step].ForEach(delegate (String name)
                     {
@@ -1064,8 +1068,8 @@ namespace AI
                     if (edge != "00") graph.EdgeById(edge).Attr.Color = Msagl.Color.Black;
                 }
             }
-            lable = history.Tutorial[step-1];
-            
+            lable = history.Tutorial[step - 1];
+
             lable.ReadOnly = true;
             lable.Width = 350;
             lable.Height = 370;
@@ -1076,7 +1080,7 @@ namespace AI
             textClose.Text = string.Join(" | ", history.hClose[step - 1]);
             // btn_Next.Enabled = true;
             gViewer1.Refresh();
-            
+
         }
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void gViewer1_Load(object sender, EventArgs e)
@@ -1102,8 +1106,7 @@ namespace AI
             if (gViewer1.Graph != null) cls();
         }
 
-
-        private void btn_Tao_Click(object sender, EventArgs e)
+        private void roundedbtn_Tao_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.ShowDialog();
@@ -1139,7 +1142,7 @@ namespace AI
                             E.Attr.ArrowheadAtTarget = Msagl.ArrowStyle.None;
                             E.Attr.Weight = Weight[i, j];
                             E.LabelText = Weight[i, j].ToString();
-                                    // MessageBox.Show(Node[i] + Node[j]);
+                            // MessageBox.Show(Node[i] + Node[j]);
                         }
                     }
                 }
@@ -1198,10 +1201,12 @@ namespace AI
 
         }
 
+
+
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
         private void gViewer1_Click(object sender, EventArgs e)
         {
-            if((gViewer1.SelectedObject is Msagl.Node) && viTri.Count < 2)
+            if ((gViewer1.SelectedObject is Msagl.Node) && viTri.Count < 2)
             {
                 Msagl.Node nodeSelec = gViewer1.SelectedObject as Msagl.Node;
                 nodeSelec.Attr.FillColor = Msagl.Color.Red;
@@ -1210,13 +1215,13 @@ namespace AI
             else
             {
                 Reset();
-                if(gViewer1.Graph != null) cls();
+                if (gViewer1.Graph != null) cls();
                 viTri.Clear();
-                
+
             }
             gViewer1.Refresh();
         }
-        
+
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         //----------------------------------------------------------------------------------------------------------------------------------------------------------------------
