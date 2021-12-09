@@ -614,7 +614,7 @@ namespace AI
                     {
                         tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
                         tutorial.SelectionColor = Color.DimGray;
-                        tutorial.SelectedText = $"Do not select {Node[egde[i].Item1] + Node[egde[i].Item2]}\n{Node[egde[i].Item2]} existed Close\nEject {Node[egde[i].Item1] + Node[egde[i].Item2]} from Open\n";
+                        tutorial.SelectedText = $"Do not select {Node[egde[i].Item1] + Node[egde[i].Item2]}, existed in Close!\nEject {Node[egde[i].Item1] + Node[egde[i].Item2]} from Open\n";
                         Open.RemoveAt(Open.IndexOf(ToNode(egde[i].Item1, egde[i].Item2)));
                         egde.RemoveAt(egde.IndexOf(egde[i]));
                     }
@@ -687,7 +687,7 @@ namespace AI
             rTB_Source.SelectionColor = Color.Brown;
             rTB_Source.SelectedText = "Initial Step\n";
             rTB_Source.SelectionColor = Color.DarkCyan;
-            rTB_Source.SelectedText = "Arrange vertices in order from smallest to largest. Add them to Open\nClose = {}\n g = 0\n\n";
+            rTB_Source.SelectedText = "Arrange vertices in order from smallest to largest.Add them to Open\nClose = {}\n g = 0\n\n";
             rTB_Source.SelectionColor = Color.Brown;
             rTB_Source.SelectedText = "Executing Step: \n\n";
             rTB_Source.SelectionColor = Color.Red;
