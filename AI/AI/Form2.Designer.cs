@@ -44,7 +44,7 @@ namespace AI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 20);
+            this.label1.Location = new System.Drawing.Point(120, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 29);
@@ -64,7 +64,7 @@ namespace AI
             // trackBar1
             // 
             this.trackBar1.LargeChange = 0;
-            this.trackBar1.Location = new System.Drawing.Point(26, 61);
+            this.trackBar1.Location = new System.Drawing.Point(110, 65);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 20;
             this.trackBar1.Minimum = 1;
@@ -78,10 +78,10 @@ namespace AI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(413, 65);
+            this.panel1.Location = new System.Drawing.Point(26, 139);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 441);
+            this.panel1.Size = new System.Drawing.Size(1602, 676);
             this.panel1.TabIndex = 15;
             // 
             // so_dinh
@@ -89,7 +89,7 @@ namespace AI
             this.so_dinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.so_dinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.so_dinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.so_dinh.Location = new System.Drawing.Point(280, 65);
+            this.so_dinh.Location = new System.Drawing.Point(373, 65);
             this.so_dinh.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.so_dinh.Name = "so_dinh";
             this.so_dinh.Size = new System.Drawing.Size(58, 39);
@@ -103,7 +103,7 @@ namespace AI
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(26, 362);
+            this.button3.Location = new System.Drawing.Point(1242, 36);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(268, 81);
@@ -119,7 +119,7 @@ namespace AI
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(26, 259);
+            this.button2.Location = new System.Drawing.Point(888, 37);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(268, 80);
@@ -135,7 +135,7 @@ namespace AI
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(26, 150);
+            this.button1.Location = new System.Drawing.Point(536, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(268, 80);
             this.button1.TabIndex = 17;
@@ -148,7 +148,7 @@ namespace AI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1343, 593);
+            this.ClientSize = new System.Drawing.Size(1684, 828);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);

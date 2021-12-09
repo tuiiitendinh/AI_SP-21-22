@@ -31,7 +31,7 @@ namespace AI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation6 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
+            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation3 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rd_Dijkstra = new System.Windows.Forms.RadioButton();
@@ -52,11 +52,11 @@ namespace AI
             this.g_Source = new System.Windows.Forms.GroupBox();
             this.rTB_Source = new System.Windows.Forms.RichTextBox();
             this.btn_ReadFile = new System.Windows.Forms.Button();
+            this.rTB_HuongDan = new System.Windows.Forms.RichTextBox();
+            this.btn_Tao = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Run = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
-            this.btn_Tao = new System.Windows.Forms.Button();
-            this.rTB_HuongDan = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.g_Source.SuspendLayout();
@@ -94,7 +94,7 @@ namespace AI
             this.gViewer1.SaveInVectorFormatEnabled = true;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = false;
-            this.gViewer1.Transform = planeTransformation6;
+            this.gViewer1.Transform = planeTransformation3;
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
             this.gViewer1.ZoomF = 1D;
@@ -251,6 +251,28 @@ namespace AI
             this.btn_ReadFile.UseVisualStyleBackColor = false;
             this.btn_ReadFile.Click += new System.EventHandler(this.btn_ReadFile_Click);
             // 
+            // rTB_HuongDan
+            // 
+            this.rTB_HuongDan.BackColor = System.Drawing.SystemColors.Control;
+            resources.ApplyResources(this.rTB_HuongDan, "rTB_HuongDan");
+            this.rTB_HuongDan.Name = "rTB_HuongDan";
+            this.rTB_HuongDan.ReadOnly = true;
+            this.rTB_HuongDan.TextChanged += new System.EventHandler(this.rTB_HuongDan_TextChanged);
+            // 
+            // btn_Tao
+            // 
+            this.btn_Tao.AllowDrop = true;
+            this.btn_Tao.AutoEllipsis = true;
+            this.btn_Tao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.btn_Tao, "btn_Tao");
+            this.btn_Tao.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btn_Tao.FlatAppearance.BorderColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Tao.FlatAppearance.BorderSize = 0;
+            this.btn_Tao.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_Tao.Name = "btn_Tao";
+            this.btn_Tao.UseVisualStyleBackColor = false;
+            this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
+            // 
             // btn_Next
             // 
             this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
@@ -284,30 +306,11 @@ namespace AI
             this.btn_Previous.UseVisualStyleBackColor = false;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
             // 
-            // btn_Tao
-            // 
-            resources.ApplyResources(this.btn_Tao, "btn_Tao");
-            this.btn_Tao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.btn_Tao.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btn_Tao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Tao.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Tao.Name = "btn_Tao";
-            this.btn_Tao.UseVisualStyleBackColor = false;
-            this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
-            // 
-            // rTB_HuongDan
-            // 
-            this.rTB_HuongDan.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.rTB_HuongDan, "rTB_HuongDan");
-            this.rTB_HuongDan.Name = "rTB_HuongDan";
-            this.rTB_HuongDan.ReadOnly = true;
-            this.rTB_HuongDan.TextChanged += new System.EventHandler(this.rTB_HuongDan_TextChanged);
-            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.Controls.Add(this.rTB_HuongDan);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Run);
@@ -358,7 +361,7 @@ namespace AI
         private System.Windows.Forms.GroupBox g_Source;
         private System.Windows.Forms.RichTextBox rTB_Source;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_Tao;
         private System.Windows.Forms.RichTextBox rTB_HuongDan;
+        private System.Windows.Forms.Button btn_Tao;
     }
 }
