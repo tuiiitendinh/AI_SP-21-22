@@ -31,7 +31,7 @@ namespace AI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation3 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
+            Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation planeTransformation4 = new Microsoft.Msagl.Core.Geometry.Curves.PlaneTransformation();
             this.gViewer1 = new Microsoft.Msagl.GraphViewerGdi.GViewer();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.rd_Dijkstra = new System.Windows.Forms.RadioButton();
@@ -94,7 +94,7 @@ namespace AI
             this.gViewer1.SaveInVectorFormatEnabled = true;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = false;
-            this.gViewer1.Transform = planeTransformation3;
+            this.gViewer1.Transform = planeTransformation4;
             this.gViewer1.UndoRedoButtonsVisible = true;
             this.gViewer1.WindowZoomButtonPressed = false;
             this.gViewer1.ZoomF = 1D;
