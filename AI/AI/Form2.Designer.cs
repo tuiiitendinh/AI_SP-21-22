@@ -64,12 +64,12 @@ namespace AI
             // trackBar1
             // 
             this.trackBar1.LargeChange = 0;
-            this.trackBar1.Location = new System.Drawing.Point(24, 61);
+            this.trackBar1.Location = new System.Drawing.Point(26, 61);
             this.trackBar1.Margin = new System.Windows.Forms.Padding(4);
             this.trackBar1.Maximum = 20;
             this.trackBar1.Minimum = 1;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(248, 56);
+            this.trackBar1.Size = new System.Drawing.Size(246, 56);
             this.trackBar1.SmallChange = 0;
             this.trackBar1.TabIndex = 13;
             this.trackBar1.Value = 1;
