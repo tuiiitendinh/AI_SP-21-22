@@ -18,34 +18,45 @@ namespace AI
             this.FormClosing += MainPage_FormClosing;
         }
         public int Sodinh = 0;
-        public int[,] mt = new int[100,100];
+        public int[,] mt = new int[100, 100];
         int h = 20, m = 3;
         int[] tmp = new int[10000];
         int chisotmp = 0;
         bool kt = false;
         private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!kt) {
+            if (!kt)
+            {
                 MessageBox.Show("Input Error!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Cancel = true;
             }
 
         }
-        private void button1_Click(object sender, EventArgs e)
+       
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            so_dinh.Text = "1";
+        }
+        Random rnd = new Random();
+        
+
+        
+
+        private void roundedButtonNew1_Click(object sender, EventArgs e)
         {
             chisotmp = 0;
             int x = 3, y = 3;
             panel1.Controls.Clear();
             Sodinh = trackBar1.Value;
-            for(int i = 0; i <= Sodinh; i++)
+            for (int i = 0; i <= Sodinh; i++)
             {
-               for(int j =0;j <= Sodinh;j++)
+                for (int j = 0; j <= Sodinh; j++)
                 {
-                   // tmp[i + j] = int.MinValue;
+                    // tmp[i + j] = int.MinValue;
                     mt[i, j] = int.MinValue;
                     TextBox a = new TextBox();
                     a.Multiline = true;
-                    a.Width = 50; 
+                    a.Width = 50;
                     a.Height = h;
                     if (i == 0 && j == 0)
                     {
@@ -57,19 +68,19 @@ namespace AI
                         if (i == 0)
                         {
                             a.ReadOnly = true;
-                            a.Text = $"N{j-1}";
+                            a.Text = $"N{j - 1}";
                         }
                         if (j == 0)
                         {
                             a.ReadOnly = true;
-                            a.Text = $"N{i-1}";
+                            a.Text = $"N{i - 1}";
                         }
                         if (i == j)
                         {
                             a.ReadOnly = true;
                             a.Text = $"∞";
                         }
-                        if (i> j && j !=0)
+                        if (i > j && j != 0)
                         {
                             a.ReadOnly = true;
                             a.Text = "???";
@@ -83,29 +94,25 @@ namespace AI
                 y += m + h;
             }
         }
-        private void Form2_Load(object sender, EventArgs e)
+
+        private void roundedButtonNew2_Click(object sender, EventArgs e)
         {
-            so_dinh.Text = "1";
-        }
-        Random rnd = new Random();
-        private void button2_Click(object sender, EventArgs e)
-        { 
-            foreach(TextBox textBox in panel1.Controls)
+            foreach (TextBox textBox in panel1.Controls)
             {
                 if (!textBox.ReadOnly)
                 {
                     int trongso = rnd.Next(-100, 100);
                     if (trongso < 0) textBox.Text = "∞";
                     else textBox.Text = trongso.ToString();
-                   
+
                 }
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        { 
-             kt = true;
-            foreach(TextBox textBox in panel1.Controls)
+        private void roundedButtonNew3_Click(object sender, EventArgs e)
+        {
+            kt = true;
+            foreach (TextBox textBox in panel1.Controls)
             {
                 int trongso;
                 if (!textBox.ReadOnly)
@@ -113,7 +120,7 @@ namespace AI
                     try
                     {
 
-                        if (textBox.Text == "∞"||int.Parse(textBox.Text) < 0 ) trongso = int.MinValue;
+                        if (textBox.Text == "∞" || int.Parse(textBox.Text) < 0) trongso = int.MinValue;
                         else trongso = int.Parse(textBox.Text);
                         tmp[chisotmp++] = trongso;
                     }
@@ -128,16 +135,16 @@ namespace AI
             if (kt)
             {
                 chisotmp = 0;
-                for(int i = 0; i < Sodinh-1; i++)
+                for (int i = 0; i < Sodinh - 1; i++)
                 {
-                    for(int j = i+1; j < Sodinh; j++)
+                    for (int j = i + 1; j < Sodinh; j++)
                     {
                         if (i != j)
                         {
                             if (tmp[chisotmp] == int.MinValue) mt[i, j] = mt[j, i] = int.MinValue;
                             else
                             {
-                              
+
                                 mt[i, j] = mt[j, i] = tmp[chisotmp];
                             }
                             chisotmp++;
@@ -154,6 +161,7 @@ namespace AI
             so_dinh.Text = trackBar1.Value.ToString();
         }
 
-     
+
     }
 }
+
