@@ -265,7 +265,7 @@ namespace AI
             history = new History();
             count = true;
             textOpen.Text = textClose.Text = textG.Text = textPrev.Text = "";
-            g_HuongDan.Controls.Clear();
+            rTB_HuongDan.Controls.Clear();
             la_Chiphi.Text = "Distance :";
         }
         //======================================================//DIJKSTRA//=============================================================================================
@@ -872,8 +872,8 @@ namespace AI
                 lable.ReadOnly = true;
                 lable.Location= new Point(0,0);
                 lable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
-                g_HuongDan.Controls.Clear();
-                g_HuongDan.Controls.Add(lable);
+                rTB_HuongDan.Controls.Clear();
+                rTB_HuongDan.Controls.Add(lable);
                 if(step > 0) btn_Previous.Enabled = true;
                 if (step == 0) cls();
                 if (rd_Dijkstra.Checked)
@@ -1070,8 +1070,8 @@ namespace AI
             lable.Width = 350;
             lable.Height = 370;
             lable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
-            g_HuongDan.Controls.Clear();
-            g_HuongDan.Controls.Add(lable);
+            rTB_HuongDan.Controls.Clear();
+            rTB_HuongDan.Controls.Add(lable);
             textOpen.Text = string.Join(" | ", history.hOpen[step - 1]);
             textClose.Text = string.Join(" | ", history.hClose[step - 1]);
             // btn_Next.Enabled = true;
@@ -1189,6 +1189,11 @@ namespace AI
         }
 
         private void textPrev_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rTB_HuongDan_TextChanged(object sender, EventArgs e)
         {
 
         }
