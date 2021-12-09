@@ -408,7 +408,7 @@ namespace AI
             tutorial.SelectedText = "Begin!\n\n";
             tutorial.SelectionFont = new Font("Consolas", 15, FontStyle.Bold);
             tutorial.SelectionColor = Color.DarkCyan;
-            tutorial.SelectedText = "Arrange vertices in order from smallest to largest.\n Add them to Open.\n\nClose = {}\n\n g = 0\n\n";
+            tutorial.SelectedText = "Arrange vertices in order from smallest to largest.\nAdd them to Open.\n\nClose = {}\n\n g = 0\n\n";
             for(int i = 0; i < coutNode -1 ; i++)
             {
                 for(int j = i+1; j < coutNode; j++)
@@ -665,19 +665,19 @@ namespace AI
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Select N of Minium g(N) in Open \n";
+            rTB_Source.SelectedText = " Step 1: Select N of Minium g(N) in Open \n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "     __Connecting to previous node (if existing)\n";
+            rTB_Source.SelectedText = "      _Connecting to previous node (if existing)\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Open vertices Q following by N\n";
+            rTB_Source.SelectedText = " Step 2: Open vertices Q following by N\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "    __If g(Q) > g(N) + w(N,Q)\n    __g(Q) = g(N) + w(N,Q)\n";
+            rTB_Source.SelectedText = "      _If g(Q) > g(N) + w(N,Q)\n    _g(Q) = g(N) + w(N,Q)\n";
             rTB_Source.SelectionColor = Color.Purple;
-            rTB_Source.SelectedText = "    __prev(Q) = N\n";
+            rTB_Source.SelectedText = "      _prev(Q) = N\n";
             rTB_Source.SelectionColor = Color.DarkGoldenrod;
-            rTB_Source.SelectedText = "    __If Q not in Open, Add Q to Open\n";
+            rTB_Source.SelectedText = "      _If Q not in Open, Add Q to Open\n";
             rTB_Source.SelectionColor = Color.DarkSlateGray;
-            rTB_Source.SelectedText = "    __Add N to Close. If N is Destination Node, Stop";
+            rTB_Source.SelectedText = "      _Add N to Close. If N is Destination Node, Stop";
         }
         void SourceKruskal()
         {
@@ -699,19 +699,19 @@ namespace AI
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = " __Select edge N\n";
+            rTB_Source.SelectedText = "  __Select edge N\n";
             rTB_Source.SelectionColor = Color.ForestGreen;
-            rTB_Source.SelectedText = "     __If 2 vertices of N not in Close(), Add N\n";
+            rTB_Source.SelectedText = "      _If 2 vertices of N not in Close(), Add N\n";
             rTB_Source.SelectionColor = Color.Purple;
             rTB_Source.SelectedText = "           g = g + w(N)\n\n";
             rTB_Source.SelectionColor = Color.LimeGreen;
-            rTB_Source.SelectedText = "     __Add N, Graph will have connectively.\n";
+            rTB_Source.SelectedText = "      _Add N, Graph will have connectively.\n";
             rTB_Source.SelectionColor = Color.Purple;
             rTB_Source.SelectedText = "           g = g + w(N)\n\n";
             rTB_Source.SelectionColor = Color.DimGray;
-            rTB_Source.SelectedText = "     __Eject N. 2 vertices of N existed in Close, graph stil have connectively.\n";
+            rTB_Source.SelectedText = "      _Eject N. 2 vertices of N existed in Close, graph stil have connectively.\n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "    __Add 2 vertices of N existed in Close";
+            rTB_Source.SelectedText = "    _Add 2 vertices of N existed in Close";
         }
         void SourcePrim()
         {
@@ -739,15 +739,15 @@ namespace AI
             rTB_Source.SelectionColor = Color.Black;
             rTB_Source.SelectedText = ")\n\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "   Step 1 _ Select N (last vertex in Close)\n\n   Step 2 _ Add adjacent edges with N which not existed in Open\n\n";
+            rTB_Source.SelectedText = "   Step 1: Select N (last vertex in Close)\n\n   Step 2: Add adjacent edges with N which not existed in Open\n\n";
             rTB_Source.SelectionColor = Color.Green;
-            rTB_Source.SelectedText = "   Step 3 _Select minimum edge NQ in Open\n\n";
+            rTB_Source.SelectedText = "   Step 3: Select minimum edge NQ in Open\n\n";
             rTB_Source.SelectionColor = Color.DimGray;
-            rTB_Source.SelectedText = "   Step 4 _If Q existed in Close, drop NQ out of Open, roll back to Step 3\n\n";
+            rTB_Source.SelectedText = "   Step 4: If Q existed in Close, drop NQ out of Open, roll back to Step 3\n\n";
             rTB_Source.SelectionColor = Color.Purple;
-            rTB_Source.SelectedText = "   Step 5 _ g = g + w(N,Q)\n\n";
+            rTB_Source.SelectedText = "   Step 5: g = g + w(N,Q)\n\n";
             rTB_Source.SelectionColor = Color.OrangeRed;
-            rTB_Source.SelectedText = "   Step 6 _ If Q not in Close, Add Q";
+            rTB_Source.SelectedText = "   Step 6: If Q not in Close, Add Q";
         }
         //-----------------------------------------------------//Thuc thi thuat toan//-----------------------------------------------------------------------------------------------------------------
         bool count = true;

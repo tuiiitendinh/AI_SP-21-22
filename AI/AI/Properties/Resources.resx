@@ -124,14 +124,14 @@
   <data name="create-matrix-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\create-matrix-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="start-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\start-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="previos-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\previos-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="read-file-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\read-file-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="next-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="read-file-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\read-file-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="next-button3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\next-button3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ramdom-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ramdom-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,28 +139,31 @@
   <data name="next-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\next-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="create-matrix-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\create-matrix-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="start-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="read-file-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\read-file-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="read-file-button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\read-file-button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="previos-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\previos-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="next-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\next-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="create-matrix-button1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create-matrix-button1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="create-matrix-button2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\create-matrix-button2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="save-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="read-file-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\read-file-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="previos-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\previos-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="next-button3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\next-button3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="create-matrix-btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create-matrix-btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
