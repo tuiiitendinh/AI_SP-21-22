@@ -264,10 +264,10 @@ namespace AI
             // btn_Previous
             // 
             this.btn_Previous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.btn_Previous.BackgroundImage = global::AI.Properties.Resources.previos_button1;
             this.btn_Previous.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Previous, "btn_Previous");
             this.btn_Previous.ForeColor = System.Drawing.Color.Black;
+            this.btn_Previous.Image = global::AI.Properties.Resources.previos_button1;
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.UseVisualStyleBackColor = false;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
@@ -282,10 +282,10 @@ namespace AI
             // btn_Next
             // 
             this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.btn_Next.BackgroundImage = global::AI.Properties.Resources.next_button3;
             this.btn_Next.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Next, "btn_Next");
             this.btn_Next.ForeColor = System.Drawing.Color.Black;
+            this.btn_Next.Image = global::AI.Properties.Resources.next_button3;
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.UseVisualStyleBackColor = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
