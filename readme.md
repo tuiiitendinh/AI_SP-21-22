@@ -7,7 +7,7 @@
 
 ### Dijkstra 
 
-![](/Images/readme/Dijkstra-Algorithm.png?raw=true "Dijkstra")
+![](/Images/readme/Dijkstra.png?raw=true "Dijkstra")
 
 ### Prim
 
