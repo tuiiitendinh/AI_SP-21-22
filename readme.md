@@ -11,8 +11,8 @@
 
 ### Prim
 
-![](/Images/readme/prim.jpg?raw=true "Prim")
+![](/Images/readme/prim-algorithm.jpg?raw=true "Prim")
 
 ### Kruskal
 
-![](/Images/readme/kruskal.jpg?raw=true "Kruskal")
+![](/Images/readme/Kruskal.jpg?raw=true "Kruskal")
