@@ -766,13 +766,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Previous.Location" type="System.Drawing.Point, System.Drawing">
-    <value>108, 826</value>
+    <value>100, 822</value>
   </data>
   <data name="btn_Previous.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btn_Previous.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 52</value>
+    <value>156, 53</value>
   </data>
   <data name="btn_Previous.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -826,13 +826,13 @@
     <value>NoControl</value>
   </data>
   <data name="btn_Next.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 826</value>
+    <value>324, 822</value>
   </data>
   <data name="btn_Next.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="btn_Next.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 53</value>
+    <value>162, 53</value>
   </data>
   <data name="btn_Next.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -2055,9 +2055,6 @@
         ////////////////////////////////////////////////////////////////////////////////
         //////////////////////////////////8=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>

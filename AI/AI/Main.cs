@@ -858,7 +858,7 @@ namespace AI
             //MessageBox.Show(step.ToString());
             if (dinhDuongDi.Count == 0)
             {
-                MessageBox.Show("Press \"START\"", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Create matrix, select algorithm and press \"Start\"!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
