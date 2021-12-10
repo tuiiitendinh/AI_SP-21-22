@@ -8,6 +8,7 @@ namespace AI
 {
     class Dijkstra
     {
+        // Initialize value the graph
         public struct DuLieu
         {
             public int sodinh;
@@ -26,6 +27,7 @@ namespace AI
             int[,] mts = new int[100, 100];
             //int[] s = new int[1000];
             List<int> list = new List<int>();
+            // Copy matrix
             for (int i = 1; i <= x.sodinh; i++)
             {
                 for (int j = 1; j <= x.sodinh; j++)
@@ -33,6 +35,7 @@ namespace AI
                     mts[i, j] = x.mt[i - 1, j - 1];
                 }
             }
+            // Initialize
             for (int i = 1; i <= x.sodinh; i++)
             {
                 nhan[i] = 0;
@@ -42,7 +45,8 @@ namespace AI
             int vet = x.di;
             nhan[vet] = 1;
             kq[vet] = 0;
-            while (vet != x.den && dem <= x.sodinh)
+            // Find shortest path for all vertices
+            while (vet != x.den && dem <= x.sodinh) 
             {
                 for (int i = 1; i <= x.sodinh; i++)
                 {
@@ -65,6 +69,7 @@ namespace AI
                 nhan[vet] = 1;
                 dem++;
             }
+            // Get shortest path to list
             if (dem < x.sodinh)
             {
                 list.Add(kq[x.den]);
