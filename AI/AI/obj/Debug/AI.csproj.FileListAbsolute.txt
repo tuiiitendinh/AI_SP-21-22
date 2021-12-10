@@ -132,3 +132,22 @@ H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CoreCompileI
 H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CopyComplete
 H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.exe
 H:\2019 - 2023\2021 - 2022\AI\AI_SP-21-22\AI\AI\obj\Debug\AI.pdb
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.csprojAssemblyReference.cache
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.Form2.resources
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.Main.resources
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.NghiVan.resources
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.GenerateResource.cache
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.exe
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.pdb
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\AI.exe.config
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\AI.exe
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\AI.pdb
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.dll
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.dll
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.dll
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.xml
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.Drawing.xml
+D:\ProjectAI\AI_SP-21-22\AI\AI\bin\Debug\Microsoft.Msagl.GraphViewerGdi.xml
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.Properties.Resources.resources
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CoreCompileInputs.cache
+D:\ProjectAI\AI_SP-21-22\AI\AI\obj\Debug\AI.csproj.CopyComplete
