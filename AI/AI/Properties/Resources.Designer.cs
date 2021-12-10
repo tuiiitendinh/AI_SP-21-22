@@ -63,16 +63,6 @@ namespace AI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap create_matrix_btn {
-            get {
-                object obj = ResourceManager.GetObject("create-matrix-btn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap create_matrix_button {
             get {
                 object obj = ResourceManager.GetObject("create-matrix-button", resourceCulture);
