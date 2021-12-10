@@ -858,7 +858,7 @@ namespace AI
             //MessageBox.Show(step.ToString());
             if (dinhDuongDi.Count == 0)
             {
-                MessageBox.Show("Press \"START\"", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Create matrix, select algorithm and press \"Start\"!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -870,12 +870,12 @@ namespace AI
                 string tg = "";
                 string tprev = "";
                 lable = history.Tutorial[step];
-
+                var color_default = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
                 lable.Width = 370;
                 lable.Height = 370;
                 lable.ReadOnly = true;
                 lable.Location = new Point(0, 0);
-                lable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(238)))), ((int)(((byte)(247)))));
+                lable.BackColor = color_default;
                 rTB_HuongDan.Controls.Clear();
                 rTB_HuongDan.Controls.Add(lable);
                 if (step > 0) btn_Previous.Enabled = true;

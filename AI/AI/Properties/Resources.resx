@@ -163,7 +163,7 @@
   <data name="previos-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\previos-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="create-matrix-btn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\create-matrix-btn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="create-matrix-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\create-matrix-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -82,6 +82,9 @@
     <Compile Include="Prim.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rbtn.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="XetDoThiHopLe.cs" />
     <Compile Include="XetLienThong.cs" />
     <EmbeddedResource Include="Form2.resx">

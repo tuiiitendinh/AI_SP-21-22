@@ -43,11 +43,11 @@ namespace AI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 32);
+            this.label1.Font = new System.Drawing.Font("Cascadia Code PL", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(115, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 28);
+            this.label1.Size = new System.Drawing.Size(270, 33);
             this.label1.TabIndex = 2;
             this.label1.Text = "Number of vetices";
             // 
@@ -104,7 +104,7 @@ namespace AI
             this.roundedButtonNew3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.roundedButtonNew3.FlatAppearance.BorderSize = 0;
             this.roundedButtonNew3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonNew3.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew3.Font = new System.Drawing.Font("Cascadia Code PL", 15F, System.Drawing.FontStyle.Bold);
             this.roundedButtonNew3.ForeColor = System.Drawing.Color.White;
             this.roundedButtonNew3.Location = new System.Drawing.Point(1228, 37);
             this.roundedButtonNew3.Name = "roundedButtonNew3";
@@ -123,7 +123,7 @@ namespace AI
             this.roundedButtonNew2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.roundedButtonNew2.FlatAppearance.BorderSize = 0;
             this.roundedButtonNew2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonNew2.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew2.Font = new System.Drawing.Font("Cascadia Code PL", 15F, System.Drawing.FontStyle.Bold);
             this.roundedButtonNew2.ForeColor = System.Drawing.Color.White;
             this.roundedButtonNew2.Location = new System.Drawing.Point(867, 37);
             this.roundedButtonNew2.Name = "roundedButtonNew2";
@@ -143,7 +143,7 @@ namespace AI
             this.roundedButtonNew1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.roundedButtonNew1.FlatAppearance.BorderSize = 0;
             this.roundedButtonNew1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundedButtonNew1.Font = new System.Drawing.Font("Calibri", 17F, System.Drawing.FontStyle.Bold);
+            this.roundedButtonNew1.Font = new System.Drawing.Font("Cascadia Code PL", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.roundedButtonNew1.ForeColor = System.Drawing.Color.White;
             this.roundedButtonNew1.Location = new System.Drawing.Point(513, 37);
             this.roundedButtonNew1.Name = "roundedButtonNew1";

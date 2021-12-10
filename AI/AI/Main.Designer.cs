@@ -52,14 +52,16 @@ namespace AI
             this.g_Source = new System.Windows.Forms.GroupBox();
             this.rTB_Source = new System.Windows.Forms.RichTextBox();
             this.rTB_HuongDan = new System.Windows.Forms.RichTextBox();
-            this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Run = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
+            this.g_HuongDan = new System.Windows.Forms.GroupBox();
+            this.btn_Next = new System.Windows.Forms.Button();
             this.roundedButtonNew2 = new AI.RoundedButtonNew();
             this.roundedButtonNew1 = new AI.RoundedButtonNew();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.g_Source.SuspendLayout();
+            this.g_HuongDan.SuspendLayout();
             this.SuspendLayout();
             // 
             // gViewer1
@@ -249,19 +251,9 @@ namespace AI
             this.rTB_HuongDan.ReadOnly = true;
             this.rTB_HuongDan.TextChanged += new System.EventHandler(this.rTB_HuongDan_TextChanged);
             // 
-            // btn_Next
-            // 
-            this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
-            this.btn_Next.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            resources.ApplyResources(this.btn_Next, "btn_Next");
-            this.btn_Next.ForeColor = System.Drawing.Color.Black;
-            this.btn_Next.Name = "btn_Next";
-            this.btn_Next.UseVisualStyleBackColor = false;
-            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
-            // 
             // btn_Run
             // 
-            this.btn_Run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(48)))), ((int)(((byte)(79)))));
+            this.btn_Run.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Run.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Run, "btn_Run");
             this.btn_Run.ForeColor = System.Drawing.Color.White;
@@ -275,16 +267,35 @@ namespace AI
             this.btn_Previous.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             resources.ApplyResources(this.btn_Previous, "btn_Previous");
             this.btn_Previous.ForeColor = System.Drawing.Color.Black;
+            this.btn_Previous.Image = global::AI.Properties.Resources.previos_button1;
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.UseVisualStyleBackColor = false;
             this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
+            // 
+            // g_HuongDan
+            // 
+            this.g_HuongDan.Controls.Add(this.rTB_HuongDan);
+            resources.ApplyResources(this.g_HuongDan, "g_HuongDan");
+            this.g_HuongDan.Name = "g_HuongDan";
+            this.g_HuongDan.TabStop = false;
+            // 
+            // btn_Next
+            // 
+            this.btn_Next.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
+            this.btn_Next.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.btn_Next, "btn_Next");
+            this.btn_Next.ForeColor = System.Drawing.Color.Black;
+            this.btn_Next.Image = global::AI.Properties.Resources.next_button3;
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.UseVisualStyleBackColor = false;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // roundedButtonNew2
             // 
             this.roundedButtonNew2.BackColor = System.Drawing.Color.White;
             this.roundedButtonNew2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.roundedButtonNew2.BorderSize = 2;
-            this.roundedButtonNew2.ControlText = "Creare Matrix";
+            this.roundedButtonNew2.ControlText = "Create Matrix";
             this.roundedButtonNew2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(26)))), ((int)(((byte)(255)))));
             this.roundedButtonNew2.FlatAppearance.BorderSize = 0;
             resources.ApplyResources(this.roundedButtonNew2, "roundedButtonNew2");
@@ -316,9 +327,9 @@ namespace AI
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Controls.Add(this.g_HuongDan);
             this.Controls.Add(this.roundedButtonNew2);
             this.Controls.Add(this.roundedButtonNew1);
-            this.Controls.Add(this.rTB_HuongDan);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Run);
             this.Controls.Add(this.g_Source);
@@ -336,6 +347,7 @@ namespace AI
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.g_Source.ResumeLayout(false);
+            this.g_HuongDan.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -368,5 +380,6 @@ namespace AI
         private System.Windows.Forms.RichTextBox rTB_HuongDan;
         private RoundedButtonNew roundedButtonNew1;
         private RoundedButtonNew roundedButtonNew2;
+        private System.Windows.Forms.GroupBox g_HuongDan;
     }
 }
