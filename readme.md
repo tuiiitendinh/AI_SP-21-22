@@ -12,3 +12,7 @@
 ### Prim
 
 ![](/Images/readme/prim.jpg?raw=true "Prim")
+
+### Kruskal
+
+![](/Images/readme/kruskal.jpg?raw=true "Kruskal")
