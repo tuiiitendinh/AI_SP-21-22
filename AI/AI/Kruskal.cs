@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AI
 {
+    // Initialize the graph
     public struct DuLieu
     {
         public int sodinh;
@@ -40,11 +41,14 @@ namespace AI
             parent[x] = x;
             rank[x] = 0;
         }
-
+        // A function that does union of two sets
+        // of x and y (uses union by rank)
         public void Union(int x, int y)
         {
             int representativeX = FindSet(x);
             int representativeY = FindSet(y);
+            // Attach smaller rank tree under root
+            // of high rank tree (Union by Rank)
             if (rank[representativeX] == rank[representativeY])
             {
                 rank[representativeY]++;
@@ -52,12 +56,17 @@ namespace AI
             }
             else if (rank[representativeX] > rank[representativeY])
             { parent[representativeY] = representativeX; }
+            // If ranks are same, then make one as
+            // root and increment its rank by one
             else
             { parent[representativeX] = representativeY; }
         }
-
+        // A utility function to find set of an
+        // element i (uses path compression technique)
         public int FindSet(int x)
         {
+            // find root and make root as parent of i
+                    // (path compression)
             if (parent[x] != x)
                 parent[x] = FindSet(parent[x]);
             return parent[x];
@@ -65,6 +74,7 @@ namespace AI
     }
     public class Kruskal
     {
+        // Initialize
         List<Edge> edges;
         int sodinh;
         public Kruskal()
@@ -86,6 +96,7 @@ namespace AI
             }
             this.sodinh = X.sodinh;
         }
+        // Find the MST using Kruskal's algorithm
         public List<int> TimDuong()
         {
             List<int> Answer = new List<int>();

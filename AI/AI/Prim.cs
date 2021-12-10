@@ -16,6 +16,9 @@ namespace AI
         List<Node> queue = new List<Node>();
         int heapSize = -1;
         public int Count { get { return queue.Count; } }
+        // A standard function to heapify at given idx
+        // This function also updates position of nodes when they are swapped.
+        // Position is needed for decreaseKey()
         private void MinHeapify(int i)
         {
             int left = ChildL(i);
@@ -79,6 +82,7 @@ namespace AI
                 }
             }
         }
+        // A utility function to swap two nodes of min heap. Needed for min heapify
         private void Swap(int i, int j)
         {
             Node temp = queue[i];

@@ -7,8 +7,12 @@
 
 ### Dijkstra 
 
-![](/Images/readme/Dijkstra-Algorithm.png?raw=true "Dijkstra")
+![](/Images/readme/Dijkstra.png?raw=true "Dijkstra")
 
 ### Prim
 
-![](/Images/readme/prim.jpg?raw=true "Prim")
+![](/Images/readme/prim-algorithm.jpg?raw=true "Prim")
+
+### Kruskal
+
+![](/Images/readme/Kruskal.jpg?raw=true "Kruskal")
